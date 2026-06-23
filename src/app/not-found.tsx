@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import type { Locale } from '@/i18n/routing';
 import enMessages from '@/messages/en.json';
 import esMessages from '@/messages/es.json';
 
@@ -9,7 +10,7 @@ const messages = { en: enMessages, es: esMessages } as const;
 
 export default function NotFound() {
   const pathname = usePathname();
-  const locale: 'en' | 'es' = pathname?.startsWith('/es') ? 'es' : 'en';
+  const locale: Locale = pathname?.startsWith('/es') ? 'es' : 'en';
   const t = messages[locale].notFound;
 
   return (

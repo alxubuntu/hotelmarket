@@ -27,7 +27,7 @@
   --color-neutral-dark: #212529;
   --color-neutral-background: #ffffff;
 
-  /* Typography */
+  /* Typography — --font-sans is set by next/font via inline style on <html> */
   --font-sans: 'Inter', system-ui, sans-serif;
-  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-heading: var(--font-sans);
 }

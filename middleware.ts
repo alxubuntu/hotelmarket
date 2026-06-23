@@ -9,6 +9,7 @@ export default createMiddleware({
 });
 
 // next-intl v4 matcher — explicit locale list for Vercel edge runtime
+// Covers: /, /en, /es, /en/anything, /es/anything
 export const config = {
-  matcher: ['/', '/(en|es)/:path*'],
+  matcher: ['/', '/(en|es)', '/(en|es)/:path*'],
 };
