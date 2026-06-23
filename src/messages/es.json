@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "heading": "Excelencia en Gestión Hotelera Empresarial",
+    "subheading": "Ayudamos a hoteles a maximizar ingresos, optimizar operaciones y ofrecer experiencias excepcionales a sus huéspedes.",
+    "cta": "Explorar Servicios"
+  },
+  "services": {
+    "heading": "Nuestros Servicios",
+    "items": [
+      {
+        "title": "Gestión Hotelera",
+        "desc": "Gestión operativa integral para hoteles empresariales de todos los tamaños, desde boutiques hasta grandes propiedades."
+      },
+      {
+        "title": "Consultoría",
+        "desc": "Consultoría estratégica para optimizar ingresos, reducir costos y mejorar los índices de satisfacción de huéspedes."
+      },
+      {
+        "title": "Eventos Corporativos",
+        "desc": "Planificación y ejecución integral de eventos corporativos, conferencias y reuniones de negocios."
+      },
+      {
+        "title": "Capacitación",
+        "desc": "Programas de capacitación especializados para el personal hotelero en excelencia de servicio, liderazgo y operaciones."
+      },
+      {
+        "title": "Tecnología Hotelera",
+        "desc": "Soluciones de transformación digital que incluyen integración de PMS, motores de reserva en línea y análisis de datos."
+      },
+      {
+        "title": "Expansión y Desarrollo",
+        "desc": "Análisis de mercado, estudios de viabilidad y asesoría estratégica para proyectos de expansión hotelera."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Contáctenos",
+    "fields": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "message": "Su mensaje"
+    },
+    "submit": "Enviar mensaje"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  },
+  "metadata": {
+    "home": {
+      "title": "Hotel Market Pro — Gestión Hotelera Empresarial",
+      "description": "Servicios profesionales de gestión hotelera y consultoría para hoteles empresariales. Maximice ingresos y satisfacción."
+    },
+    "about": {
+      "title": "Nosotros — Hotel Market Pro",
+      "description": "Conozca la misión, los valores y el equipo de expertos en hospitalidad de Hotel Market Pro."
+    },
+    "services": {
+      "title": "Servicios — Hotel Market Pro",
+      "description": "Servicios integrales de gestión hotelera que incluyen operaciones, consultoría, eventos, capacitación y tecnología."
+    },
+    "contact": {
+      "title": "Contacto — Hotel Market Pro",
+      "description": "Póngase en contacto con Hotel Market Pro. Estaremos encantados de atenderle."
+    }
+  },
+  "about": {
+    "heading": "Acerca de Hotel Market Pro",
+    "body": "Hotel Market Pro es una empresa líder en gestión hotelera empresarial con más de 15 años de experiencia en la industria de la hospitalidad. Nos especializamos en maximizar ingresos, optimizar operaciones y ofrecer experiencias excepcionales a los huéspedes en hoteles de todos los tamaños. Nuestro equipo de expertos aporta un profundo conocimiento del sector y soluciones innovadoras a cada propiedad que gestionamos."
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "Lo sentimos, no pudimos encontrar la página que buscas.",
+    "homeLink": "Volver al inicio"
+  }
+}

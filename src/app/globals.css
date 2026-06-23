@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand — primary (navy blue) */
+  --color-brand-primary: #1e3a5f;
+  --color-brand-primary-light: #2d5a8e;
+
+  /* Brand — secondary (gold accent) */
+  --color-brand-secondary: #c8a45c;
+  --color-brand-secondary-light: #e0c080;
+  --color-brand-accent: #c8a45c;
+
+  /* Neutral palette */
+  --color-neutral-50: #f8f9fa;
+  --color-neutral-100: #e9ecef;
+  --color-neutral-200: #dee2e6;
+  --color-neutral-300: #ced4da;
+  --color-neutral-400: #adb5bd;
+  --color-neutral-500: #6c757d;
+  --color-neutral-600: #495057;
+  --color-neutral-700: #495057;
+  --color-neutral-800: #343a40;
+  --color-neutral-900: #212529;
+  --color-neutral-light: #f8f9fa;
+  --color-neutral-dark: #212529;
+  --color-neutral-background: #ffffff;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Inter', system-ui, sans-serif;
+}
