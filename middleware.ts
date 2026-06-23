@@ -8,10 +8,7 @@ export default createMiddleware({
   localePrefix: 'always',
 });
 
+// next-intl v4 matcher — explicit locale list for Vercel edge runtime
 export const config = {
-  // Explicit '/' entry ensures root redirect (/ → /en/) works on Vercel
-  matcher: [
-    '/',
-    '/((?!api|_next|_vercel|.*\\..*).*)',
-  ],
+  matcher: ['/', '/(en|es)/:path*'],
 };
