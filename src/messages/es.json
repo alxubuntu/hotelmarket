@@ -1,9 +1,15 @@
 {
   "nav": {
     "home": "Inicio",
-    "about": "Nosotros",
+    "about": "Quiénes Somos",
     "services": "Servicios",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "menuLabel": "Navegación",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "mainNav": "Navegación principal",
+    "mobileNav": "Navegación móvil",
+    "languageSwitcher": "Selector de idioma"
   },
   "hero": {
     "heading": "Excelencia en Gestión Hotelera Empresarial",
@@ -46,7 +52,12 @@
       "email": "Correo electrónico",
       "message": "Su mensaje"
     },
-    "submit": "Enviar mensaje"
+    "submit": "Enviar mensaje",
+    "sending": "Enviando…",
+    "success": {
+      "title": "¡Mensaje enviado con éxito!",
+      "body": "Gracias por contactarnos. Te responderemos a la brevedad."
+    }
   },
   "footer": {
     "rights": "Todos los derechos reservados."
@@ -57,7 +68,7 @@
       "description": "Servicios profesionales de gestión hotelera y consultoría para hoteles empresariales. Maximice ingresos y satisfacción."
     },
     "about": {
-      "title": "Nosotros — Hotel Market Pro",
+      "title": "Quiénes Somos — Hotel Market Pro",
       "description": "Conozca la misión, los valores y el equipo de expertos en hospitalidad de Hotel Market Pro."
     },
     "services": {
@@ -72,6 +83,11 @@
   "about": {
     "heading": "Acerca de Hotel Market Pro",
     "body": "Hotel Market Pro es una empresa líder en gestión hotelera empresarial con más de 15 años de experiencia en la industria de la hospitalidad. Nos especializamos en maximizar ingresos, optimizar operaciones y ofrecer experiencias excepcionales a los huéspedes en hoteles de todos los tamaños. Nuestro equipo de expertos aporta un profundo conocimiento del sector y soluciones innovadoras a cada propiedad que gestionamos."
+  },
+  "error": {
+    "title": "Algo salió mal",
+    "description": "Ocurrió un error inesperado. Por favor, intentá de nuevo.",
+    "retry": "Intentar de nuevo"
   },
   "notFound": {
     "title": "Página no encontrada",

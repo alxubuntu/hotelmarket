@@ -1,13 +1,14 @@
 'use client';
 
 import { usePathname, useRouter } from '@/i18n/routing';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useTransition } from 'react';
 
 export function LanguageSwitcher() {
   const pathname = usePathname();
   const router = useRouter();
   const locale = useLocale();
+  const t = useTranslations('nav');
   const [isPending, startTransition] = useTransition();
 
   function switchLocale(nextLocale: 'en' | 'es') {
@@ -22,7 +23,7 @@ export function LanguageSwitcher() {
   const btnInactive = 'text-white/60 hover:text-white hover:bg-white/10';
 
   return (
-    <div className="flex items-center gap-1" role="group" aria-label="Language switcher">
+    <div className="flex items-center gap-1" role="group" aria-label={t('languageSwitcher')}>
       <button
         onClick={() => switchLocale('en')}
         disabled={isPending || locale === 'en'}

@@ -23,7 +23,7 @@ export async function Header() {
         </NavLink>
 
         {/* Desktop navigation */}
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-8 md:flex" aria-label={t('mainNav')}>
           {links.map((link) => (
             <NavLink key={link.href} href={link.href}>
               {link.label}

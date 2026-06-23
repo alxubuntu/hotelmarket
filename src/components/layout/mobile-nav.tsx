@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import { NavLink } from './nav-link';
 
 type NavItem = {
@@ -43,6 +44,7 @@ function CloseIcon() {
 }
 
 export function MobileNav({ links }: MobileNavProps) {
+  const t = useTranslations('nav');
   const [isOpen, setIsOpen] = useState(false);
 
   const close = useCallback(() => setIsOpen(false), []);
@@ -53,7 +55,7 @@ export function MobileNav({ links }: MobileNavProps) {
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="ml-2 rounded p-2 text-white transition-colors hover:bg-white/10 md:hidden"
-        aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+        aria-label={isOpen ? t('closeMenu') : t('openMenu')}
         aria-expanded={isOpen}
       >
         {isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -71,16 +73,16 @@ export function MobileNav({ links }: MobileNavProps) {
           {/* Drawer panel */}
           <div className="fixed inset-y-0 right-0 z-50 w-72 bg-brand-primary shadow-xl md:hidden">
             <div className="flex items-center justify-between px-4 py-4">
-              <span className="text-sm font-medium text-white/80">Navegación</span>
+              <span className="text-sm font-medium text-white/80">{t('menuLabel')}</span>
               <button
                 onClick={close}
                 className="rounded p-2 text-white transition-colors hover:bg-white/10"
-                aria-label="Cerrar menú"
+                aria-label={t('closeMenu')}
               >
                 <CloseIcon />
               </button>
             </div>
-            <nav className="flex flex-col gap-1 px-4" aria-label="Mobile navigation">
+            <nav className="flex flex-col gap-1 px-4" aria-label={t('mobileNav')}>
               {links.map((link) => (
                 <NavLink
                   key={link.href}

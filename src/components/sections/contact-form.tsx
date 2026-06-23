@@ -42,10 +42,10 @@ export function ContactForm() {
             role="alert"
           >
             <p className="text-lg font-semibold text-green-800">
-              ¡Mensaje enviado con éxito!
+              {t('success.title')}
             </p>
             <p className="mt-2 text-green-600">
-              Gracias por contactarnos. Te responderemos a la brevedad.
+              {t('success.body')}
             </p>
           </div>
         ) : (
@@ -100,7 +100,7 @@ export function ContactForm() {
             )}
 
             <Button type="submit" size="lg" className="w-full" disabled={status.type === 'sending'}>
-              {status.type === 'sending' ? 'Enviando…' : t('submit')}
+              {status.type === 'sending' ? t('sending') : t('submit')}
             </Button>
           </form>
         )}

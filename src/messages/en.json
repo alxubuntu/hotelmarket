@@ -3,7 +3,13 @@
     "home": "Home",
     "about": "About Us",
     "services": "Services",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menuLabel": "Navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "languageSwitcher": "Language switcher"
   },
   "hero": {
     "heading": "Excellence in Business Hotel Management",
@@ -46,7 +52,12 @@
       "email": "Email Address",
       "message": "Your Message"
     },
-    "submit": "Send Message"
+    "submit": "Send Message",
+    "sending": "Sending…",
+    "success": {
+      "title": "Message sent successfully!",
+      "body": "Thank you for contacting us. We'll get back to you shortly."
+    }
   },
   "footer": {
     "rights": "All rights reserved."
@@ -72,6 +83,11 @@
   "about": {
     "heading": "About Hotel Market Pro",
     "body": "Hotel Market Pro is a leading business hotel management company with over 15 years of experience in the hospitality industry. We specialize in maximizing revenue, streamlining operations, and delivering exceptional guest experiences for hotels of all sizes. Our team of experts brings deep industry knowledge and innovative solutions to every property we manage."
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again.",
+    "retry": "Try again"
   },
   "notFound": {
     "title": "Page Not Found",
