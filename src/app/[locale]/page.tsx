@@ -3,7 +3,7 @@ import type { Locale } from '@/i18n/routing';
 import { HeroSection } from '@/components/sections/hero-section';
 
 type Props = {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata({ params }: Props) {
@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default function HomePage() {
-  return <HeroSection />;
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+  return <HeroSection locale={locale as Locale} />;
 }

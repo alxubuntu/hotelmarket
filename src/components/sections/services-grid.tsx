@@ -1,14 +1,15 @@
 import { getTranslations } from 'next-intl/server';
 import { Container } from '@/components/ui/container';
 import { Card } from '@/components/ui/card';
+import type { Locale } from '@/i18n/routing';
 
 type ServiceItem = {
   title: string;
   desc: string;
 };
 
-export async function ServicesGrid() {
-  const t = await getTranslations('services');
+export async function ServicesGrid({ locale }: { locale: Locale }) {
+  const t = await getTranslations({ locale, namespace: 'services' });
   const items = t.raw('items') as ServiceItem[];
 
   return (

@@ -2,9 +2,10 @@ import { getTranslations } from 'next-intl/server';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/routing';
+import type { Locale } from '@/i18n/routing';
 
-export async function HeroSection() {
-  const t = await getTranslations('hero');
+export async function HeroSection({ locale }: { locale: Locale }) {
+  const t = await getTranslations({ locale, namespace: 'hero' });
 
   return (
     <section className="bg-gradient-to-br from-brand-primary to-[#0f2640] py-20 text-white md:py-32">

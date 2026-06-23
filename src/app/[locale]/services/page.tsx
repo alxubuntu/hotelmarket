@@ -3,7 +3,7 @@ import type { Locale } from '@/i18n/routing';
 import { ServicesGrid } from '@/components/sections/services-grid';
 
 type Props = {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata({ params }: Props) {
@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default function ServicesPage() {
-  return <ServicesGrid />;
+export default async function ServicesPage({ params }: Props) {
+  const { locale } = await params;
+  return <ServicesGrid locale={locale as Locale} />;
 }

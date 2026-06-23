@@ -39,14 +39,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   const messages = await getMessages({ locale });
+  const localeTyped = locale as Locale;
 
   return (
     <NextIntlClientProvider messages={messages}>
       <LangSetter />
       <div className="flex min-h-screen flex-col">
-        <Header />
+        <Header locale={localeTyped} />
         <main className="flex-1">{children}</main>
-        <Footer />
+        <Footer locale={localeTyped} />
       </div>
     </NextIntlClientProvider>
   );

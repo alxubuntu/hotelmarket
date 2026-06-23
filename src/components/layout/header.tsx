@@ -3,9 +3,10 @@ import { Container } from '@/components/ui/container';
 import { NavLink } from './nav-link';
 import { LanguageSwitcher } from './language-switcher';
 import { MobileNav } from './mobile-nav';
+import type { Locale } from '@/i18n/routing';
 
-export async function Header() {
-  const t = await getTranslations('nav');
+export async function Header({ locale }: { locale: Locale }) {
+  const t = await getTranslations({ locale, namespace: 'nav' });
 
   const links = [
     { href: '/', label: t('home') },
