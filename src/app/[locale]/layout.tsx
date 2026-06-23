@@ -42,7 +42,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const localeTyped = locale as Locale;
 
   return (
-    <NextIntlClientProvider messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={messages}>
       <LangSetter />
       <div className="flex min-h-screen flex-col">
         <Header locale={localeTyped} />
