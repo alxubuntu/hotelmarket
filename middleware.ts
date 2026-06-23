@@ -9,5 +9,9 @@ export default createMiddleware({
 });
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+  // Explicit '/' entry ensures root redirect (/ → /en/) works on Vercel
+  matcher: [
+    '/',
+    '/((?!api|_next|_vercel|.*\\..*).*)',
+  ],
 };
