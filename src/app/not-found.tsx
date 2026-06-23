@@ -1,26 +1,16 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import enMessages from '@/messages/en.json';
+import esMessages from '@/messages/es.json';
+
+const messages = { en: enMessages, es: esMessages } as const;
 
 export default function NotFound() {
   const pathname = usePathname();
-  const locale = pathname?.startsWith('/es') ? 'es' : 'en';
-
-  const content = {
-    en: {
-      title: 'Page Not Found',
-      description: "Sorry, we couldn't find the page you're looking for.",
-      homeLink: 'Back to Home',
-    },
-    es: {
-      title: 'Página no encontrada',
-      description: 'Lo sentimos, no pudimos encontrar la página que buscas.',
-      homeLink: 'Volver al inicio',
-    },
-  };
-
-  const t = content[locale];
+  const locale: 'en' | 'es' = pathname?.startsWith('/es') ? 'es' : 'en';
+  const t = messages[locale].notFound;
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-4">
@@ -29,7 +19,7 @@ export default function NotFound() {
       <p className="mb-8 text-center text-neutral-500">{t.description}</p>
       <Link
         href={`/${locale}`}
-        className="rounded bg-brand-primary px-6 py-3 text-white transition-colors hover:bg-brand-primary-light"
+        className="rounded bg-brand-primary px-6 py-3 text-white transition-colors hover:bg-[var(--color-brand-primary-light)]"
       >
         {t.homeLink}
       </Link>

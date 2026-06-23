@@ -3,10 +3,10 @@
 schema: spec-driven
 
 context: |
-  Tech stack: Greenfield — no stack detected yet (empty project dir)
-  Architecture: Corporate website / business hotel hub (static/dynamic)
-  Testing: No test runner detected — strict_tdd disabled until a runner is configured
-  Style: TBD — project is empty, no conventions established
+  Tech stack: Next.js 15 (App Router), TypeScript 5.7, Tailwind CSS 3.4, next-intl 4 (i18n)
+  Architecture: Corporate website / business hotel hub (SSG with static pages)
+  Testing: Vitest + @testing-library/react — configured
+  Style: Prettier, standard Next.js/React conventions, commitlint for conventional commits
 
 rules:
   proposal:
