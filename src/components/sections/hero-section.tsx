@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
-import { Link } from '@/i18n/routing';
+import { Link, getPathname } from '@/i18n/routing';
 import type { Locale } from '@/i18n/routing';
 
 export async function HeroSection({ locale }: { locale: Locale }) {
@@ -16,7 +16,7 @@ export async function HeroSection({ locale }: { locale: Locale }) {
         <p className="mx-auto mb-10 max-w-2xl text-lg text-white/80 md:text-xl">
           {t('subheading')}
         </p>
-        <Link href="/services">
+        <Link href={getPathname({ locale, href: '/services' })}>
           <Button size="lg" className="bg-brand-secondary text-brand-primary hover:bg-brand-secondary-light">
             {t('cta')}
           </Button>

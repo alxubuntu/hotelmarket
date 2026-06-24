@@ -14,7 +14,7 @@ type Props = {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html className={inter.variable}>
       <body className="min-h-screen bg-neutral-background font-sans text-neutral-dark antialiased">
         {children}
       </body>
