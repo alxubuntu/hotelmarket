@@ -14,7 +14,11 @@
   "hero": {
     "heading": "Excellence in Business Hotel Management",
     "subheading": "We help hotels maximize revenue, streamline operations, and deliver exceptional guest experiences.",
-    "cta": "Explore Our Services"
+    "cta": "Explore Our Services",
+    "learnMore": "Learn More",
+    "statHotels": "150+ Hotels Managed",
+    "statCountries": "12 Countries",
+    "statRetention": "98% Client Retention"
   },
   "services": {
     "heading": "Our Services",
@@ -61,6 +65,41 @@
   },
   "footer": {
     "rights": "All rights reserved."
+  },
+  "home": {
+    "trust": {
+      "heading": "Trusted by Leading Hotels Worldwide",
+      "metrics": [
+        { "value": "150+", "label": "Hotels Managed" },
+        { "value": "12", "label": "Countries" },
+        { "value": "98%", "label": "Client Retention" },
+        { "value": "24/7", "label": "Support" }
+      ]
+    },
+    "testimonials": {
+      "heading": "What Our Clients Say",
+      "items": [
+        {
+          "quote": "HotelMarket transformed our operations. Revenue up 40% in 6 months.",
+          "name": "María García",
+          "role": "GM, Hotel Centro"
+        },
+        {
+          "quote": "The consulting team understood our challenges immediately. Professional and results-driven.",
+          "name": "James Chen",
+          "role": "Owner, Pacific Suites"
+        },
+        {
+          "quote": "Their technology stack integrated seamlessly with our existing systems.",
+          "name": "Sarah Müller",
+          "role": "Operations Director, Alpine Resorts"
+        }
+      ]
+    },
+    "contactCta": {
+      "heading": "Ready to Elevate Your Hotel?",
+      "subtext": "Let's discuss how we can help your property reach its full potential. Our team of experts is ready to design a tailored solution for your hotel."
+    }
   },
   "metadata": {
     "home": {

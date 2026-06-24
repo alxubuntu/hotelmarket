@@ -13,9 +13,9 @@ export async function ServicesGrid({ locale }: { locale: Locale }) {
   const items = t.raw('items') as ServiceItem[];
 
   return (
-    <section className="bg-neutral-background py-16 md:py-24">
+    <section id="services" className="bg-white py-16 md:py-24">
       <Container>
-        <h2 className="mb-12 text-center text-3xl font-bold text-brand-primary md:text-4xl">
+        <h2 className="mb-12 text-center font-heading text-3xl font-bold text-brand-primary md:text-4xl">
           {t('heading')}
         </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

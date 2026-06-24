@@ -14,7 +14,11 @@
   "hero": {
     "heading": "Excelencia en Gestión Hotelera Empresarial",
     "subheading": "Ayudamos a hoteles a maximizar ingresos, optimizar operaciones y ofrecer experiencias excepcionales a sus huéspedes.",
-    "cta": "Explorar Servicios"
+    "cta": "Explorar Servicios",
+    "learnMore": "Más Información",
+    "statHotels": "Más de 150 Hoteles Gestionados",
+    "statCountries": "12 Países",
+    "statRetention": "98% de Retención de Clientes"
   },
   "services": {
     "heading": "Nuestros Servicios",
@@ -61,6 +65,41 @@
   },
   "footer": {
     "rights": "Todos los derechos reservados."
+  },
+  "home": {
+    "trust": {
+      "heading": "Líderes Hoteleros Confían en Nosotros",
+      "metrics": [
+        { "value": "150+", "label": "Hoteles Gestionados" },
+        { "value": "12", "label": "Países" },
+        { "value": "98%", "label": "Retención de Clientes" },
+        { "value": "24/7", "label": "Soporte" }
+      ]
+    },
+    "testimonials": {
+      "heading": "Lo Que Dicen Nuestros Clientes",
+      "items": [
+        {
+          "quote": "HotelMarket transformó nuestras operaciones. Los ingresos aumentaron un 40% en 6 meses.",
+          "name": "María García",
+          "role": "Gerente General, Hotel Centro"
+        },
+        {
+          "quote": "El equipo de consultoría comprendió nuestros desafíos de inmediato. Profesionales y orientados a resultados.",
+          "name": "James Chen",
+          "role": "Propietario, Pacific Suites"
+        },
+        {
+          "quote": "Su plataforma tecnológica se integró perfectamente con nuestros sistemas existentes.",
+          "name": "Sarah Müller",
+          "role": "Directora de Operaciones, Alpine Resorts"
+        }
+      ]
+    },
+    "contactCta": {
+      "heading": "¿Listo para Elevar tu Hotel?",
+      "subtext": "Conversemos sobre cómo podemos ayudar a que su propiedad alcance su máximo potencial. Nuestro equipo de expertos está listo para diseñar una solución a medida para su hotel."
+    }
   },
   "metadata": {
     "home": {

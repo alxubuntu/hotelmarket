@@ -25,9 +25,9 @@
   --color-neutral-900: #212529;
   --color-neutral-light: #f8f9fa;
   --color-neutral-dark: #212529;
-  --color-neutral-background: #ffffff;
+  --color-neutral-background: #F8FAFC;
 
   /* Typography — --font-sans is set by next/font via inline style on <html> */
   --font-sans: 'Inter', system-ui, sans-serif;
-  --font-heading: var(--font-sans);
+  --font-heading: 'Playfair Display', serif;
 }

@@ -28,7 +28,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-heading)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-heading)', 'serif'],
       },
     },
   },
