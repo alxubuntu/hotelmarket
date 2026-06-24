@@ -1,6 +1,5 @@
 import { getTranslations } from 'next-intl/server';
 import { Container } from '@/components/ui/container';
-import { Link } from '@/i18n/routing';
 import type { Locale } from '@/i18n/routing';
 
 export async function HeroSection({ locale }: { locale: Locale }) {
@@ -36,12 +35,12 @@ export async function HeroSection({ locale }: { locale: Locale }) {
 
         {/* CTA buttons */}
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            href="/services"
+          <a
+            href={`/${locale}/services`}
             className="inline-flex items-center justify-center rounded bg-brand-secondary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-secondary-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-primary"
           >
             {t('cta')}
-          </Link>
+          </a>
           <a
             href="#services"
             className="inline-flex items-center justify-center rounded border-2 border-white/30 px-8 py-4 text-lg font-medium text-white transition-colors duration-200 hover:border-white/60 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-primary"
