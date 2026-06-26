@@ -2,77 +2,69 @@
   "nav": {
     "home": "Inicio",
     "about": "Quiénes Somos",
-    "services": "Servicios",
+    "services": "Plataforma",
     "contact": "Contacto",
+    "hotels": "Hoteles",
+    "partners": "Socios",
+    "caseStudies": "Casos de Éxito",
     "menuLabel": "Navegación",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
     "mainNav": "Navegación principal",
     "mobileNav": "Navegación móvil",
-    "languageSwitcher": "Selector de idioma"
-  },
-  "hero": {
-    "heading": "Excelencia en Gestión Hotelera Empresarial",
-    "subheading": "Ayudamos a hoteles a maximizar ingresos, optimizar operaciones y ofrecer experiencias excepcionales a sus huéspedes.",
-    "cta": "Explorar Servicios",
-    "learnMore": "Más Información",
-    "statHotels": "Más de 150 Hoteles Gestionados",
-    "statCountries": "12 Países",
-    "statRetention": "98% de Retención de Clientes"
-  },
-  "services": {
-    "heading": "Nuestros Servicios",
-    "items": [
-      {
-        "title": "Gestión Hotelera",
-        "desc": "Gestión operativa integral para hoteles empresariales de todos los tamaños, desde boutiques hasta grandes propiedades."
-      },
-      {
-        "title": "Consultoría",
-        "desc": "Consultoría estratégica para optimizar ingresos, reducir costos y mejorar los índices de satisfacción de huéspedes."
-      },
-      {
-        "title": "Eventos Corporativos",
-        "desc": "Planificación y ejecución integral de eventos corporativos, conferencias y reuniones de negocios."
-      },
-      {
-        "title": "Capacitación",
-        "desc": "Programas de capacitación especializados para el personal hotelero en excelencia de servicio, liderazgo y operaciones."
-      },
-      {
-        "title": "Tecnología Hotelera",
-        "desc": "Soluciones de transformación digital que incluyen integración de PMS, motores de reserva en línea y análisis de datos."
-      },
-      {
-        "title": "Expansión y Desarrollo",
-        "desc": "Análisis de mercado, estudios de viabilidad y asesoría estratégica para proyectos de expansión hotelera."
-      }
-    ]
-  },
-  "contact": {
-    "heading": "Contáctenos",
-    "fields": {
-      "name": "Nombre completo",
-      "email": "Correo electrónico",
-      "message": "Su mensaje"
-    },
-    "submit": "Enviar mensaje",
-    "sending": "Enviando…",
-    "success": {
-      "title": "¡Mensaje enviado con éxito!",
-      "body": "Gracias por contactarnos. Te responderemos a la brevedad."
-    }
-  },
-  "footer": {
-    "rights": "Todos los derechos reservados."
+    "languageSwitcher": "Selector de idioma",
+    "audienceToggle": "Selector de audiencia",
+    "buyers": "Compradores",
+    "partnersLabel": "Socios"
   },
   "home": {
+    "hero": {
+      "buyerHeading": "Encuentra el Hotel Perfecto para tu Equipo",
+      "buyerSubheading": "Reservas corporativas grupales simplificadas. Compara hoteles, negocia tarifas y reserva en menos de 3 clics.",
+      "buyerCta": "Buscar Hoteles",
+      "partnerHeading": "Aumenta los Ingresos Corporativos de tu Hotel",
+      "partnerSubheading": "Únete a nuestra red de 200+ hoteles y accede a una corriente constante de reservas corporativas.",
+      "partnerCta": "Ser Socio",
+      "statHotels": "200+ Hoteles",
+      "statCountries": "15 Países",
+      "statRetention": "95% Satisfacción"
+    },
+    "features": {
+      "heading": "La Plataforma Hotel Market Pro",
+      "subheading": "Todo lo que necesitas para reservas corporativas sin complicaciones",
+      "items": [
+        {
+          "title": "Motor de Reservas Grupales",
+          "desc": "Reserva habitaciones para equipos de 10 a 500 con disponibilidad instantánea y tarifas grupales negociadas."
+        },
+        {
+          "title": "Paquetes Corporativos",
+          "desc": "Tarifas grupales con descuento, catering personalizado, coordinación de eventos y políticas de cancelación flexibles."
+        },
+        {
+          "title": "Red de Socios",
+          "desc": "Accede a una red curada de hoteles de negocios verificados para estándares de servicio corporativo."
+        },
+        {
+          "title": "Servicios de Eventos",
+          "desc": "Salas de conferencias, equipo AV, catering y coordinadores de eventos dedicados en hoteles asociados."
+        },
+        {
+          "title": "Disponibilidad en Tiempo Real",
+          "desc": "Inventario de habitaciones y precios en vivo actualizados cada 15 minutos en nuestra red hotelera."
+        },
+        {
+          "title": "Pagos Seguros",
+          "desc": "Datos encriptados, sin costos ocultos y protección de pagos en cada reserva corporativa."
+        }
+      ]
+    },
     "trust": {
-      "heading": "Líderes Hoteleros Confían en Nosotros",
+      "heading": "Empresas Líderes Confían en Nosotros",
       "metrics": [
-        { "value": "150+", "label": "Hoteles Gestionados" },
-        { "value": "12", "label": "Países" },
-        { "value": "98%", "label": "Retención de Clientes" },
+        { "value": "200+", "label": "Hoteles" },
+        { "value": "15", "label": "Países" },
+        { "value": "95%", "label": "Satisfacción" },
         { "value": "24/7", "label": "Soporte" }
       ]
     },
@@ -80,48 +72,361 @@
       "heading": "Lo Que Dicen Nuestros Clientes",
       "items": [
         {
-          "quote": "HotelMarket transformó nuestras operaciones. Los ingresos aumentaron un 40% en 6 meses.",
-          "name": "María García",
-          "role": "Gerente General, Hotel Centro"
+          "quote": "Reducimos el tiempo de reserva hotelera en un 80%. Las negociaciones de tarifas grupales nos ahorraron $120K el último trimestre.",
+          "name": "Sarah Mitchell",
+          "role": "Directora de Viajes, TechCorp Global"
         },
         {
-          "quote": "El equipo de consultoría comprendió nuestros desafíos de inmediato. Profesionales y orientados a resultados.",
-          "name": "James Chen",
-          "role": "Propietario, Pacific Suites"
+          "quote": "Asociarse con Hotel Market Pro aumentó nuestra ocupación corporativa en un 35% en el primer trimestre.",
+          "name": "Carlos Ramírez",
+          "role": "Gerente General, Hotel Sevilla Business"
         },
         {
-          "quote": "Su plataforma tecnológica se integró perfectamente con nuestros sistemas existentes.",
-          "name": "Sarah Müller",
-          "role": "Directora de Operaciones, Alpine Resorts"
+          "quote": "La función de disponibilidad en tiempo real eliminó por completo los problemas de sobreventa.",
+          "name": "Elena Fischer",
+          "role": "Gerente de Eventos, European Finance Group"
         }
       ]
     },
     "contactCta": {
-      "heading": "¿Listo para Elevar tu Hotel?",
-      "subtext": "Conversemos sobre cómo podemos ayudar a que su propiedad alcance su máximo potencial. Nuestro equipo de expertos está listo para diseñar una solución a medida para su hotel."
+      "heading": "¿Listo para Transformar tu Experiencia Hotelera?",
+      "subtext": "Ya sea que reserves para un equipo de 10 o gestiones un portafolio de 50 hoteles, estamos aquí para ayudarte."
+    }
+  },
+  "about": {
+    "heading": "Sobre Hotel Market Pro",
+    "body": "Hotel Market Pro es la plataforma B2B que conecta compradores corporativos con hoteles de negocios premium. Simplificamos reservas grupales, negociamos tarifas competitivas y aseguramos que cada estancia cumpla estándares corporativos.",
+    "mission": {
+      "heading": "Nuestra Misión",
+      "body": "Hacer que las reservas corporativas de hoteles sean tan simples como reservar una sola habitación — mientras entregamos mejores tarifas, mejor servicio y transparencia total."
+    },
+    "values": {
+      "heading": "Por Qué Elegirnos",
+      "items": [
+        {
+          "title": "Simplicidad",
+          "desc": "Reserva habitaciones grupales en menos de 3 clics con nuestra plataforma optimizada."
+        },
+        {
+          "title": "Ahorro",
+          "desc": "Tarifas corporativas negociadas que ahorran 15-30% versus la reserva directa."
+        },
+        {
+          "title": "Confianza",
+          "desc": "Cada hotel en nuestra red está verificado para estándares de servicio corporativo."
+        },
+        {
+          "title": "Soporte",
+          "desc": "Gerentes de cuenta dedicados y soporte 24/7 para viajes grupales."
+        }
+      ]
+    }
+  },
+  "services": {
+    "heading": "Funcionalidades de la Plataforma",
+    "subheading": "Herramientas potentes para reservas corporativas y gestión de socios",
+    "items": [
+      {
+        "title": "Motor de Reservas Grupales",
+        "desc": "Reserva habitaciones para equipos de 10 a 500 con disponibilidad instantánea y tarifas grupales negociadas."
+      },
+      {
+        "title": "Paquetes Corporativos",
+        "desc": "Tarifas grupales con descuento, catering personalizado, coordinación de eventos y políticas de cancelación flexibles."
+      },
+      {
+        "title": "Red de Socios",
+        "desc": "Accede a una red curada de hoteles de negocios verificados para estándares de servicio corporativo."
+      },
+      {
+        "title": "Servicios de Eventos",
+        "desc": "Salas de conferencias, equipo AV, catering y coordinadores de eventos dedicados en hoteles asociados."
+      },
+      {
+        "title": "Disponibilidad en Tiempo Real",
+        "desc": "Inventario de habitaciones y precios en vivo actualizados cada 15 minutos en nuestra red hotelera."
+      },
+      {
+        "title": "Pagos Seguros",
+        "desc": "Datos encriptados, sin costos ocultos y protección de pagos en cada reserva corporativa."
+      }
+    ]
+  },
+  "hotels": {
+    "heading": "Explorar Hoteles Corporativos",
+    "subheading": "Encuentra el hotel perfecto para tu próxima estancia corporativa o evento grupal",
+    "filters": {
+      "heading": "Filtrar Hoteles",
+      "capacity": "Capacidad Grupal",
+      "capacityAll": "Cualquier Capacidad",
+      "capacitySmall": "Hasta 25 huéspedes",
+      "capacityMedium": "25-100 huéspedes",
+      "capacityLarge": "100+ huéspedes",
+      "events": "Servicios de Eventos",
+      "eventsYes": "Con Espacio para Eventos",
+      "eventsAll": "Todos los Hoteles",
+      "location": "Ubicación",
+      "locationAll": "Todas las Ubicaciones",
+      "packages": "Paquetes Corporativos",
+      "packagesYes": "Con Paquetes",
+      "packagesAll": "Todos los Hoteles",
+      "clearFilters": "Limpiar Filtros",
+      "resultsCount": "{count} hoteles encontrados"
+    },
+    "cards": {
+      "guests": "huéspedes",
+      "eventSpace": "Espacio para Eventos",
+      "corporatePackages": "Paquetes Corporativos",
+      "viewDetails": "Ver Detalles"
+    },
+    "items": [
+      {
+        "name": "Gran Hotel de Negocios",
+        "location": "Madrid, España",
+        "capacity": 120,
+        "events": true,
+        "packages": true,
+        "features": ["Centro de Convenciones", "Salón Ejecutivo", "Traslado al Aeropuerto"]
+      },
+      {
+        "name": "Suites Parque Tecnológico",
+        "location": "Barcelona, España",
+        "capacity": 80,
+        "events": true,
+        "packages": true,
+        "features": ["Espacio de Coworking", "Sala de Reuniones en Azotea", "Gimnasio"]
+      },
+      {
+        "name": "Hotel Vista del Puerto",
+        "location": "Róterdam, Países Bajos",
+        "capacity": 200,
+        "events": true,
+        "packages": true,
+        "features": ["Salón de Baile Frontal al Agua", "Equipo AV", "Estacionamiento"]
+      },
+      {
+        "name": "Posada Centro Ciudad",
+        "location": "Frankfurt, Alemania",
+        "capacity": 45,
+        "events": false,
+        "packages": true,
+        "features": ["Centro de Negocios", "WiFi Gratis", "Desayuno Incluido"]
+      },
+      {
+        "name": "Resort de Conferencias Alpinas",
+        "location": "Innsbruck, Austria",
+        "capacity": 150,
+        "events": true,
+        "packages": true,
+        "features": ["Vistas Montañosas", "Actividades de Team Building", "Spa"]
+      },
+      {
+        "name": "Torre Metropolitana",
+        "location": "Londres, Reino Unido",
+        "capacity": 300,
+        "events": true,
+        "packages": true,
+        "features": ["Sala de Conferencias con Vista Panorámica", "Acceso a Helipuerto", "Conserjería"]
+      }
+    ],
+    "trust": {
+      "heading": "Por Qué Reservar con Nosotros",
+      "items": [
+        { "title": "Hoteles Verificados", "desc": "Cada hotel es inspeccionado para calidad de servicio corporativo" },
+        { "title": "Garantía de Mejor Tarifa", "desc": "Tarifas corporativas negociadas que no encontrarás en otro lugar" },
+        { "title": "Soporte 24/7", "desc": "Soporte dedicado para reservas grupales y solicitudes especiales" }
+      ]
+    }
+  },
+  "partners": {
+    "heading": "Sé Socio de Hotel Market Pro",
+    "subheading": "Aumenta tus ingresos corporativos uniéndote a nuestra red de hoteles premium de negocios",
+    "benefits": {
+      "heading": "Beneficios para Socios",
+      "items": [
+        {
+          "title": "Crecimiento de Ocupación",
+          "desc": "Aumenta la ocupación corporativa entre 25-40% a través de nuestra red de compradores corporativos verificados."
+        },
+        {
+          "title": "Portafolio de Clientes Corporativos",
+          "desc": "Accede a empresas Fortune 500, firmas de consultoría y corporaciones multinacionales."
+        },
+        {
+          "title": "Onboarding Simplificado",
+          "desc": "Obtén tu listado y comienza a recibir reservas dentro de 5 días hábiles."
+        },
+        {
+          "title": "Análisis de Ingresos",
+          "desc": "Paneles en tiempo real mostrando reservas, tasas de ocupación e ingresos."
+        }
+      ]
+    },
+    "onboarding": {
+      "heading": "Cómo Funciona",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Enviar Solicitud",
+          "desc": "Completa un breve formulario con los detalles de tu hotel y lista de verificación de preparación corporativa."
+        },
+        {
+          "step": "2",
+          "title": "Llamada de Demostración",
+          "desc": "Nuestro equipo te guía por la plataforma y responde tus preguntas."
+        },
+        {
+          "step": "3",
+          "title": "Acuerdo",
+          "desc": "Revisa y firma el acuerdo de asociación con términos transparentes."
+        },
+        {
+          "step": "4",
+          "title": "Activación del Listado",
+          "desc": "Tu hotel se publica en la plataforma y comienza a recibir consultas corporativas."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "¿Listo para Aumentar tus Ingresos Corporativos?",
+      "subtext": "Únete a 200+ hoteles que ya generan ingresos corporativos a través de nuestra plataforma.",
+      "button": "Solicitar Demostración"
+    }
+  },
+  "caseStudies": {
+    "heading": "Casos de Éxito",
+    "subheading": "Descubre cómo hoteles y empresas prosperan con Hotel Market Pro",
+    "items": [
+      {
+        "hotel": "Hotel Sevilla Business",
+        "location": "Sevilla, España",
+        "quote": "Asociarse con Hotel Market Pro transformó nuestro negocio corporativo. Pasamos de 15% a 52% de ocupación corporativa en solo seis meses.",
+        "name": "Carlos Ramírez",
+        "role": "Gerente General",
+        "metrics": {
+          "before": { "occupancy": "15%", "revenue": "€180K/año" },
+          "after": { "occupancy": "52%", "revenue": "€540K/año" }
+        },
+        "results": "Los ingresos corporativos se triplicaron, la tasa de reserva recurrente alcanzó 78%, y el hotel obtuvo una calificación corporativa de 4.8 estrellas."
+      },
+      {
+        "hotel": "Suites Parque Tecnológico",
+        "location": "Barcelona, España",
+        "quote": "La plataforma nos trajo clientes que nunca hubiéramos alcanzado por nuestra cuenta. El onboarding fue impecable.",
+        "name": "Ana López",
+        "role": "Directora de Ingresos",
+        "metrics": {
+          "before": { "occupancy": "38%", "revenue": "€220K/año" },
+          "after": { "occupancy": "67%", "revenue": "€480K/año" }
+        },
+        "results": "El segmento corporativo creció 130%, la tarifa diaria promedio aumentó 22%, y la puntuación de satisfacción del huésped subió a 4.7/5."
+      }
+    ],
+    "cta": {
+      "heading": "¿Quieres Resultados Como Estos?",
+      "subtext": "Únete a nuestra red de socios y comienza a hacer crecer tus ingresos corporativos hoy.",
+      "button": "Ser Socio"
+    }
+  },
+  "contact": {
+    "heading": "Contáctenos",
+    "subheading": "Nos encantaría saber de ti. Envíanos un mensaje y te responderemos dentro de 24 horas.",
+    "fields": {
+      "name": "Nombre Completo",
+      "namePlaceholder": "Juan Pérez",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "juan@empresa.com",
+      "subject": "Asunto",
+      "subjectGeneral": "Consulta General",
+      "subjectDemo": "Solicitar Demostración",
+      "subjectPartners": "Consulta de Asociación",
+      "message": "Tu Mensaje",
+      "messagePlaceholder": "Cuéntanos cómo podemos ayudarte..."
+    },
+    "validation": {
+      "nameRequired": "El nombre es obligatorio",
+      "nameLength": "El nombre debe tener entre 2 y 100 caracteres",
+      "emailRequired": "El correo electrónico es obligatorio",
+      "emailInvalid": "Por favor ingresa un correo electrónico válido",
+      "subjectRequired": "Por favor selecciona un asunto",
+      "messageRequired": "El mensaje es obligatorio",
+      "messageLength": "El mensaje debe tener entre 10 y 5000 caracteres"
+    },
+    "submit": "Enviar Mensaje",
+    "sending": "Enviando…",
+    "success": {
+      "title": "¡Mensaje enviado con éxito!",
+      "body": "Gracias por contactarnos. Te responderemos dentro de 24 horas."
+    },
+    "error": {
+      "title": "Algo salió mal",
+      "body": "Por favor intenta de nuevo o contáctanos directamente en hello@hotelmarketpro.com"
+    },
+    "rateLimited": {
+      "title": "Demasiadas solicitudes",
+      "body": "Has enviado demasiados mensajes. Por favor espera un momento antes de intentar de nuevo."
     }
   },
   "metadata": {
     "home": {
-      "title": "Hotel Market Pro — Gestión Hotelera Empresarial",
-      "description": "Servicios profesionales de gestión hotelera y consultoría para hoteles empresariales. Maximice ingresos y satisfacción."
+      "title": "Hotel Market Pro — Plataforma B2B Corporativa",
+      "description": "La plataforma B2B que conecta compradores corporativos con hoteles premium de negocios. Reservas grupales, tarifas negociadas y viajes corporativos sin complicaciones."
     },
     "about": {
       "title": "Quiénes Somos — Hotel Market Pro",
-      "description": "Conozca la misión, los valores y el equipo de expertos en hospitalidad de Hotel Market Pro."
+      "description": "Conoce la misión de Hotel Market Pro para simplificar las reservas corporativas de hoteles para empresas en todo el mundo."
     },
     "services": {
-      "title": "Servicios — Hotel Market Pro",
-      "description": "Servicios integrales de gestión hotelera que incluyen operaciones, consultoría, eventos, capacitación y tecnología."
+      "title": "Funcionalidades de la Plataforma — Hotel Market Pro",
+      "description": "Explora nuestro motor de reservas grupales, paquetes corporativos, red de socios y servicios de eventos."
     },
     "contact": {
-      "title": "Contacto — Hotel Market Pro",
-      "description": "Póngase en contacto con Hotel Market Pro. Estaremos encantados de atenderle."
+      "title": "Contáctenos — Hotel Market Pro",
+      "description": "Ponte en contacto con Hotel Market Pro. Respondemos a todas las consultas dentro de 24 horas."
+    },
+    "hotels": {
+      "title": "Explorar Hoteles Corporativos — Hotel Market Pro",
+      "description": "Encuentra el hotel perfecto para tu estancia corporativa o evento grupal. Filtra por capacidad, ubicación y servicios."
+    },
+    "partners": {
+      "title": "Ser Socio — Hotel Market Pro",
+      "description": "Únete a nuestra red de 200+ hoteles y haz crecer tus ingresos corporativos. Conoce los beneficios y el proceso de incorporación."
+    },
+    "caseStudies": {
+      "title": "Casos de Éxito — Hotel Market Pro",
+      "description": "Descubre cómo hoteles y empresas prosperan con la plataforma B2B de Hotel Market Pro."
     }
   },
-  "about": {
-    "heading": "Acerca de Hotel Market Pro",
-    "body": "Hotel Market Pro es una empresa líder en gestión hotelera empresarial con más de 15 años de experiencia en la industria de la hospitalidad. Nos especializamos en maximizar ingresos, optimizar operaciones y ofrecer experiencias excepcionales a los huéspedes en hoteles de todos los tamaños. Nuestro equipo de expertos aporta un profundo conocimiento del sector y soluciones innovadoras a cada propiedad que gestionamos."
+  "footer": {
+    "buyerLinks": {
+      "heading": "Para Compradores",
+      "hotels": "Explorar Hoteles",
+      "services": "Funcionalidades",
+      "contact": "Contacto"
+    },
+    "partnerLinks": {
+      "heading": "Para Socios",
+      "partners": "Ser Socio",
+      "caseStudies": "Casos de Éxito",
+      "contact": "Contacto"
+    },
+    "companyLinks": {
+      "heading": "Empresa",
+      "about": "Quiénes Somos",
+      "contact": "Contacto"
+    },
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  },
+  "shared": {
+    "learnMore": "Más Información",
+    "getStarted": "Comenzar",
+    "requestDemo": "Solicitar Demostración",
+    "browseHotels": "Explorar Hoteles",
+    "becomePartner": "Ser Socio",
+    "viewAll": "Ver Todo",
+    "backToHome": "Volver al Inicio"
   },
   "error": {
     "title": "Algo salió mal",
