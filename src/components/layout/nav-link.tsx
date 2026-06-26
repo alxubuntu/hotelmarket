@@ -1,15 +1,16 @@
 'use client';
 
 import { Link, usePathname } from '@/i18n/routing';
-import type { ComponentProps, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 type NavLinkProps = {
   href: string;
   children: ReactNode;
   className?: string;
-} & Omit<ComponentProps<typeof Link>, 'href' | 'children' | 'className'>;
+  onClick?: () => void;
+};
 
-export function NavLink({ href, children, className = '', ...rest }: NavLinkProps) {
+export function NavLink({ href, children, className = '', onClick }: NavLinkProps) {
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -18,11 +19,14 @@ export function NavLink({ href, children, className = '', ...rest }: NavLinkProp
   const activeClasses = 'text-brand-secondary';
   const inactiveClasses = 'text-white/80 hover:text-white';
 
+  // Cast href to bypass strict pathnames typing — we only use English canonical paths
+  const linkHref = href as never;
+
   return (
     <Link
-      href={href}
+      href={linkHref}
       className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses} ${className}`.trim()}
-      {...rest}
+      onClick={onClick}
     >
       {children}
     </Link>

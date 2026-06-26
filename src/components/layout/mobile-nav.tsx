@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { NavLink } from './nav-link';
+import { AudienceToggle, type Audience } from './audience-toggle';
 
 type NavItem = {
   href: string;
@@ -82,6 +83,12 @@ export function MobileNav({ links }: MobileNavProps) {
                 <CloseIcon />
               </button>
             </div>
+
+            {/* Audience toggle inside overlay */}
+            <div className="px-4 pb-4">
+              <AudienceToggle />
+            </div>
+
             <nav className="flex flex-col gap-1 px-4" aria-label={t('mobileNav')}>
               {links.map((link) => (
                 <NavLink

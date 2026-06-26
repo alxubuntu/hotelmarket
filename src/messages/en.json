@@ -4,75 +4,67 @@
     "about": "About Us",
     "services": "Services",
     "contact": "Contact",
+    "hotels": "Hotels",
+    "partners": "Partners",
+    "caseStudies": "Case Studies",
     "menuLabel": "Navigation",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "mainNav": "Main navigation",
     "mobileNav": "Mobile navigation",
-    "languageSwitcher": "Language switcher"
-  },
-  "hero": {
-    "heading": "Excellence in Business Hotel Management",
-    "subheading": "We help hotels maximize revenue, streamline operations, and deliver exceptional guest experiences.",
-    "cta": "Explore Our Services",
-    "learnMore": "Learn More",
-    "statHotels": "150+ Hotels Managed",
-    "statCountries": "12 Countries",
-    "statRetention": "98% Client Retention"
-  },
-  "services": {
-    "heading": "Our Services",
-    "items": [
-      {
-        "title": "Hotel Management",
-        "desc": "Comprehensive operational management for business hotels of all sizes, from boutique to large-scale properties."
-      },
-      {
-        "title": "Consulting",
-        "desc": "Strategic consulting to optimize revenue, reduce costs, and improve guest satisfaction scores."
-      },
-      {
-        "title": "Corporate Events",
-        "desc": "End-to-end planning and execution of corporate events, conferences, and business meetings."
-      },
-      {
-        "title": "Staff Training",
-        "desc": "Specialized training programs for hotel staff covering service excellence, leadership, and operations."
-      },
-      {
-        "title": "Hotel Technology",
-        "desc": "Digital transformation solutions including PMS integration, online booking engines, and data analytics."
-      },
-      {
-        "title": "Expansion & Development",
-        "desc": "Market analysis, feasibility studies, and strategic guidance for hotel expansion projects."
-      }
-    ]
-  },
-  "contact": {
-    "heading": "Get in Touch",
-    "fields": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "message": "Your Message"
-    },
-    "submit": "Send Message",
-    "sending": "Sending…",
-    "success": {
-      "title": "Message sent successfully!",
-      "body": "Thank you for contacting us. We'll get back to you shortly."
-    }
-  },
-  "footer": {
-    "rights": "All rights reserved."
+    "languageSwitcher": "Language switcher",
+    "audienceToggle": "Audience toggle",
+    "buyers": "Buyers",
+    "partnersLabel": "Partners"
   },
   "home": {
+    "hero": {
+      "buyerHeading": "Find the Perfect Hotel for Your Team",
+      "buyerSubheading": "Corporate group bookings made simple. Compare hotels, negotiate rates, and book in under 3 clicks.",
+      "buyerCta": "Find Hotels",
+      "partnerHeading": "Grow Your Hotel's Corporate Revenue",
+      "partnerSubheading": "Join our network of 200+ hotels and access a steady stream of corporate bookings.",
+      "partnerCta": "Partner With Us",
+      "statHotels": "200+ Hotels",
+      "statCountries": "15 Countries",
+      "statRetention": "95% Satisfaction"
+    },
+    "features": {
+      "heading": "The Hotel Market Pro Platform",
+      "subheading": "Everything you need for seamless corporate hotel bookings",
+      "items": [
+        {
+          "title": "Group Booking Engine",
+          "desc": "Book rooms for teams of 10 to 500 with instant availability checks and group-negotiated rates."
+        },
+        {
+          "title": "Corporate Packages",
+          "desc": "Discounted group rates, customized catering, event coordination, and flexible cancellation policies."
+        },
+        {
+          "title": "Partner Network",
+          "desc": "Access a curated network of business hotels vetted for corporate service standards."
+        },
+        {
+          "title": "Event Services",
+          "desc": "Conference rooms, AV equipment, catering, and dedicated event coordinators at partner hotels."
+        },
+        {
+          "title": "Real-Time Availability",
+          "desc": "Live room inventory and pricing updated every 15 minutes across our hotel network."
+        },
+        {
+          "title": "Secure Payments",
+          "desc": "Encrypted data, no hidden fees, and payment protection on every corporate booking."
+        }
+      ]
+    },
     "trust": {
-      "heading": "Trusted by Leading Hotels Worldwide",
+      "heading": "Trusted by Leading Companies Worldwide",
       "metrics": [
-        { "value": "150+", "label": "Hotels Managed" },
-        { "value": "12", "label": "Countries" },
-        { "value": "98%", "label": "Client Retention" },
+        { "value": "200+", "label": "Hotels" },
+        { "value": "15", "label": "Countries" },
+        { "value": "95%", "label": "Satisfaction" },
         { "value": "24/7", "label": "Support" }
       ]
     },
@@ -80,48 +72,361 @@
       "heading": "What Our Clients Say",
       "items": [
         {
-          "quote": "HotelMarket transformed our operations. Revenue up 40% in 6 months.",
-          "name": "María García",
-          "role": "GM, Hotel Centro"
+          "quote": "We cut our hotel booking time by 80%. The group rate negotiations alone saved us $120K last quarter.",
+          "name": "Sarah Mitchell",
+          "role": "Travel Director, TechCorp Global"
         },
         {
-          "quote": "The consulting team understood our challenges immediately. Professional and results-driven.",
-          "name": "James Chen",
-          "role": "Owner, Pacific Suites"
+          "quote": "Partnering with Hotel Market Pro increased our corporate occupancy by 35% in the first quarter.",
+          "name": "Carlos Ramírez",
+          "role": "GM, Hotel Sevilla Business"
         },
         {
-          "quote": "Their technology stack integrated seamlessly with our existing systems.",
-          "name": "Sarah Müller",
-          "role": "Operations Director, Alpine Resorts"
+          "quote": "The platform's real-time availability feature eliminated overbooking headaches completely.",
+          "name": "Elena Fischer",
+          "role": "Events Manager, European Finance Group"
         }
       ]
     },
     "contactCta": {
-      "heading": "Ready to Elevate Your Hotel?",
-      "subtext": "Let's discuss how we can help your property reach its full potential. Our team of experts is ready to design a tailored solution for your hotel."
-    }
-  },
-  "metadata": {
-    "home": {
-      "title": "Hotel Market Pro — Business Hotel Management",
-      "description": "Professional hotel management and consulting services for business hotels. Maximize revenue and guest satisfaction."
-    },
-    "about": {
-      "title": "About Us — Hotel Market Pro",
-      "description": "Learn about Hotel Market Pro's mission, values, and team of hospitality experts."
-    },
-    "services": {
-      "title": "Services — Hotel Market Pro",
-      "description": "Comprehensive hotel management services including operations, consulting, events, training, and technology."
-    },
-    "contact": {
-      "title": "Contact — Hotel Market Pro",
-      "description": "Get in touch with Hotel Market Pro. We'd love to hear from you."
+      "heading": "Ready to Transform Your Hotel Experience?",
+      "subtext": "Whether you're booking for a team of 10 or managing a portfolio of 50 hotels, we're here to help."
     }
   },
   "about": {
     "heading": "About Hotel Market Pro",
-    "body": "Hotel Market Pro is a leading business hotel management company with over 15 years of experience in the hospitality industry. We specialize in maximizing revenue, streamlining operations, and delivering exceptional guest experiences for hotels of all sizes. Our team of experts brings deep industry knowledge and innovative solutions to every property we manage."
+    "body": "Hotel Market Pro is the B2B platform connecting corporate travel buyers with premium business hotels. We simplify group bookings, negotiate competitive rates, and ensure every stay meets corporate standards.",
+    "mission": {
+      "heading": "Our Mission",
+      "body": "To make corporate hotel bookings as simple as booking a single room — while delivering better rates, better service, and complete transparency."
+    },
+    "values": {
+      "heading": "Why Choose Us",
+      "items": [
+        {
+          "title": "Simplicity",
+          "desc": "Book group rooms in under 3 clicks with our streamlined platform."
+        },
+        {
+          "title": "Savings",
+          "desc": "Corporate-negotiated rates that save 15-30% versus direct booking."
+        },
+        {
+          "title": "Trust",
+          "desc": "Every hotel in our network is vetted for corporate service standards."
+        },
+        {
+          "title": "Support",
+          "desc": "Dedicated account managers and 24/7 support for group travel."
+        }
+      ]
+    }
+  },
+  "services": {
+    "heading": "Our Platform Features",
+    "subheading": "Powerful tools for corporate hotel bookings and partner management",
+    "items": [
+      {
+        "title": "Group Booking Engine",
+        "desc": "Book rooms for teams of 10 to 500 with instant availability checks and group-negotiated rates."
+      },
+      {
+        "title": "Corporate Packages",
+        "desc": "Discounted group rates, customized catering, event coordination, and flexible cancellation policies."
+      },
+      {
+        "title": "Partner Network",
+        "desc": "Access a curated network of business hotels vetted for corporate service standards."
+      },
+      {
+        "title": "Event Services",
+        "desc": "Conference rooms, AV equipment, catering, and dedicated event coordinators at partner hotels."
+      },
+      {
+        "title": "Real-Time Availability",
+        "desc": "Live room inventory and pricing updated every 15 minutes across our hotel network."
+      },
+      {
+        "title": "Secure Payments",
+        "desc": "Encrypted data, no hidden fees, and payment protection on every corporate booking."
+      }
+    ]
+  },
+  "hotels": {
+    "heading": "Browse Corporate Hotels",
+    "subheading": "Find the perfect hotel for your next corporate stay or group event",
+    "filters": {
+      "heading": "Filter Hotels",
+      "capacity": "Group Capacity",
+      "capacityAll": "Any Capacity",
+      "capacitySmall": "Up to 25 guests",
+      "capacityMedium": "25-100 guests",
+      "capacityLarge": "100+ guests",
+      "events": "Event Services",
+      "eventsYes": "With Event Space",
+      "eventsAll": "All Hotels",
+      "location": "Location",
+      "locationAll": "All Locations",
+      "packages": "Corporate Packages",
+      "packagesYes": "With Packages",
+      "packagesAll": "All Hotels",
+      "clearFilters": "Clear Filters",
+      "resultsCount": "{count} hotels found"
+    },
+    "cards": {
+      "guests": "guests",
+      "eventSpace": "Event Space",
+      "corporatePackages": "Corporate Packages",
+      "viewDetails": "View Details"
+    },
+    "items": [
+      {
+        "name": "Grand Business Hotel",
+        "location": "Madrid, Spain",
+        "capacity": 120,
+        "events": true,
+        "packages": true,
+        "features": ["Conference Center", "Executive Lounge", "Airport Shuttle"]
+      },
+      {
+        "name": "Tech Park Suites",
+        "location": "Barcelona, Spain",
+        "capacity": 80,
+        "events": true,
+        "packages": true,
+        "features": ["Co-working Space", "Rooftop Meeting Room", "Gym"]
+      },
+      {
+        "name": "Harbour View Hotel",
+        "location": "Rotterdam, Netherlands",
+        "capacity": 200,
+        "events": true,
+        "packages": true,
+        "features": ["Waterfront Ballroom", "AV Equipment", "Parking"]
+      },
+      {
+        "name": "City Center Inn",
+        "location": "Frankfurt, Germany",
+        "capacity": 45,
+        "events": false,
+        "packages": true,
+        "features": ["Business Center", "Free WiFi", "Breakfast Included"]
+      },
+      {
+        "name": "Alpine Conference Resort",
+        "location": "Innsbruck, Austria",
+        "capacity": 150,
+        "events": true,
+        "packages": true,
+        "features": ["Mountain Views", "Team Building Activities", "Spa"]
+      },
+      {
+        "name": "Metropolitan Tower",
+        "location": "London, UK",
+        "capacity": 300,
+        "events": true,
+        "packages": true,
+        "features": ["Skyline Conference Hall", "Helipad Access", "Concierge"]
+      }
+    ],
+    "trust": {
+      "heading": "Why Book Through Us",
+      "items": [
+        { "title": "Verified Hotels", "desc": "Every hotel is inspected for corporate service quality" },
+        { "title": "Best Rate Guarantee", "desc": "Corporate-negotiated rates you won't find elsewhere" },
+        { "title": "24/7 Support", "desc": "Dedicated support for group bookings and special requests" }
+      ]
+    }
+  },
+  "partners": {
+    "heading": "Partner With Hotel Market Pro",
+    "subheading": "Grow your corporate revenue by joining our network of premium business hotels",
+    "benefits": {
+      "heading": "Partner Benefits",
+      "items": [
+        {
+          "title": "Occupancy Growth",
+          "desc": "Increase corporate occupancy by 25-40% through our network of verified corporate buyers."
+        },
+        {
+          "title": "Corporate Client Portfolio",
+          "desc": "Access Fortune 500 companies, consulting firms, and multinational corporations."
+        },
+        {
+          "title": "Simplified Onboarding",
+          "desc": "Get listed and start receiving bookings within 5 business days."
+        },
+        {
+          "title": "Revenue Analytics",
+          "desc": "Real-time dashboards showing bookings, occupancy rates, and revenue trends."
+        }
+      ]
+    },
+    "onboarding": {
+      "heading": "How It Works",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Submit Application",
+          "desc": "Fill out a brief form with your hotel details and corporate readiness checklist."
+        },
+        {
+          "step": "2",
+          "title": "Demo Call",
+          "desc": "Our team walks you through the platform and answers your questions."
+        },
+        {
+          "step": "3",
+          "title": "Agreement",
+          "desc": "Review and sign the partnership agreement with transparent terms."
+        },
+        {
+          "step": "4",
+          "title": "Listing Activation",
+          "desc": "Your hotel goes live on the platform and starts receiving corporate inquiries."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Ready to Grow Your Corporate Revenue?",
+      "subtext": "Join 200+ hotels already generating corporate revenue through our platform.",
+      "button": "Request a Demo"
+    }
+  },
+  "caseStudies": {
+    "heading": "Success Stories",
+    "subheading": "See how hotels and companies are thriving with Hotel Market Pro",
+    "items": [
+      {
+        "hotel": "Hotel Sevilla Business",
+        "location": "Seville, Spain",
+        "quote": "Partnering with Hotel Market Pro transformed our corporate business. We went from 15% to 52% corporate occupancy in just six months.",
+        "name": "Carlos Ramírez",
+        "role": "General Manager",
+        "metrics": {
+          "before": { "occupancy": "15%", "revenue": "€180K/yr" },
+          "after": { "occupancy": "52%", "revenue": "€540K/yr" }
+        },
+        "results": "Corporate revenue tripled, repeat booking rate hit 78%, and the hotel earned a 4.8-star corporate rating."
+      },
+      {
+        "hotel": "Tech Park Suites",
+        "location": "Barcelona, Spain",
+        "quote": "The platform brought us clients we never could have reached on our own. The onboarding was seamless.",
+        "name": "Ana López",
+        "role": "Revenue Director",
+        "metrics": {
+          "before": { "occupancy": "38%", "revenue": "€220K/yr" },
+          "after": { "occupancy": "67%", "revenue": "€480K/yr" }
+        },
+        "results": "Corporate segment grew 130%, average daily rate increased 22%, and guest satisfaction score rose to 4.7/5."
+      }
+    ],
+    "cta": {
+      "heading": "Want Results Like These?",
+      "subtext": "Join our partner network and start growing your corporate revenue today.",
+      "button": "Become a Partner"
+    }
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subheading": "We'd love to hear from you. Send us a message and we'll respond within 24 hours.",
+    "fields": {
+      "name": "Full Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@company.com",
+      "subject": "Subject",
+      "subjectGeneral": "General Inquiry",
+      "subjectDemo": "Request a Demo",
+      "subjectPartners": "Partnership Inquiry",
+      "message": "Your Message",
+      "messagePlaceholder": "Tell us how we can help..."
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "nameLength": "Name must be between 2 and 100 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "subjectRequired": "Please select a subject",
+      "messageRequired": "Message is required",
+      "messageLength": "Message must be between 10 and 5000 characters"
+    },
+    "submit": "Send Message",
+    "sending": "Sending…",
+    "success": {
+      "title": "Message sent successfully!",
+      "body": "Thank you for contacting us. We'll get back to you within 24 hours."
+    },
+    "error": {
+      "title": "Something went wrong",
+      "body": "Please try again or contact us directly at hello@hotelmarketpro.com"
+    },
+    "rateLimited": {
+      "title": "Too many requests",
+      "body": "You've sent too many messages. Please wait a moment before trying again."
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "Hotel Market Pro — B2B Corporate Hotel Platform",
+      "description": "The B2B platform connecting corporate travel buyers with premium business hotels. Group bookings, negotiated rates, and seamless corporate travel."
+    },
+    "about": {
+      "title": "About Us — Hotel Market Pro",
+      "description": "Learn about Hotel Market Pro's mission to simplify corporate hotel bookings for businesses worldwide."
+    },
+    "services": {
+      "title": "Platform Features — Hotel Market Pro",
+      "description": "Explore our group booking engine, corporate packages, partner network, and event services."
+    },
+    "contact": {
+      "title": "Contact Us — Hotel Market Pro",
+      "description": "Get in touch with Hotel Market Pro. We respond to all inquiries within 24 hours."
+    },
+    "hotels": {
+      "title": "Browse Corporate Hotels — Hotel Market Pro",
+      "description": "Find the perfect hotel for your corporate stay or group event. Filter by capacity, location, and services."
+    },
+    "partners": {
+      "title": "Partner With Us — Hotel Market Pro",
+      "description": "Join our network of 200+ hotels and grow your corporate revenue. Learn about partner benefits and onboarding."
+    },
+    "caseStudies": {
+      "title": "Success Stories — Hotel Market Pro",
+      "description": "See how hotels and companies are thriving with Hotel Market Pro's B2B platform."
+    }
+  },
+  "footer": {
+    "buyerLinks": {
+      "heading": "For Buyers",
+      "hotels": "Browse Hotels",
+      "services": "Platform Features",
+      "contact": "Contact Us"
+    },
+    "partnerLinks": {
+      "heading": "For Partners",
+      "partners": "Partner With Us",
+      "caseStudies": "Success Stories",
+      "contact": "Contact Us"
+    },
+    "companyLinks": {
+      "heading": "Company",
+      "about": "About Us",
+      "contact": "Contact"
+    },
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "shared": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "requestDemo": "Request a Demo",
+    "browseHotels": "Browse Hotels",
+    "becomePartner": "Become a Partner",
+    "viewAll": "View All",
+    "backToHome": "Back to Home"
   },
   "error": {
     "title": "Something went wrong",

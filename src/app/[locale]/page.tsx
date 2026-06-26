@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
-import { HeroSection } from '@/components/sections/hero-section';
-import { ServicesGrid } from '@/components/sections/services-grid';
+import { DualAudienceHero } from '@/components/sections/dual-audience-hero';
+import { PlatformFeatures } from '@/components/sections/platform-features';
 import { TrustBar } from '@/components/sections/trust-bar';
 import { Testimonials } from '@/components/sections/testimonials';
 import { ContactCta } from '@/components/sections/contact-cta';
@@ -26,8 +26,8 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
-      <HeroSection locale={localeTyped} />
-      <ServicesGrid locale={localeTyped} />
+      <DualAudienceHero />
+      <PlatformFeatures locale={localeTyped} />
       <TrustBar locale={localeTyped} />
       <Testimonials locale={localeTyped} />
       <ContactCta locale={localeTyped} />
