@@ -20,15 +20,16 @@ export function AudienceToggle({ onChange, className = '' }: AudienceToggleProps
   }
 
   const base =
-    'px-4 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-200';
-  const activeStyle = 'bg-brand-secondary text-brand-primary shadow-sm';
-  const inactiveStyle = 'text-white/70 hover:text-white hover:bg-white/10';
+    'px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-200';
+  const activeStyle = 'bg-brand-secondary text-black shadow-md';
+  const inactiveStyle =
+    'text-white/90 hover:text-white border border-white/30 hover:border-white/60 hover:bg-white/10';
 
   return (
     <div
       role="radiogroup"
       aria-label={t('audienceToggle')}
-      className={`inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/5 p-1 ${className}`}
+      className={`inline-flex items-center rounded-full border border-white/20 bg-white/5 p-1 ${className}`}
     >
       <button
         role="radio"

@@ -28,7 +28,7 @@ export function DualAudienceHero() {
               <p className="mt-3 text-white/70">{t('buyerSubheading')}</p>
               <a
                 href="#hotels"
-                className="mt-6 inline-flex items-center justify-center rounded bg-brand-secondary px-6 py-3 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-secondary-light"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-brand-secondary px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-brand-secondary-light md:w-auto"
               >
                 {t('buyerCta')}
               </a>
@@ -40,7 +40,7 @@ export function DualAudienceHero() {
               <p className="mt-3 text-white/70">{t('partnerSubheading')}</p>
               <a
                 href="#partners"
-                className="mt-6 inline-flex items-center justify-center rounded border-2 border-brand-secondary px-6 py-3 text-sm font-medium text-brand-secondary transition-colors hover:bg-brand-secondary hover:text-brand-primary"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-xl border-2 border-brand-secondary px-6 py-3 text-sm font-medium text-brand-secondary transition-colors hover:bg-brand-secondary hover:text-black md:w-auto"
               >
                 {t('partnerCta')}
               </a>
