@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
-import { ServicesGrid } from '@/components/sections/services-grid';
+import { PlatformFeatures } from '@/components/sections/platform-features';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -18,5 +18,5 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function ServicesPage({ params }: Props) {
   const { locale } = await params;
-  return <ServicesGrid locale={locale as Locale} />;
+  return <PlatformFeatures locale={locale as Locale} />;
 }
