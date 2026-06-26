@@ -10,6 +10,20 @@ export const routing = defineRouting({
   locales,
   defaultLocale,
   localePrefix: 'always',
+  pathnames: {
+    '/hotels': {
+      en: '/hotels',
+      es: '/hoteles',
+    },
+    '/partners': {
+      en: '/partners',
+      es: '/socios',
+    },
+    '/case-studies': {
+      en: '/case-studies',
+      es: '/casos-de-exito',
+    },
+  },
 });
 
 export const { Link, redirect, usePathname, useRouter, getPathname } =

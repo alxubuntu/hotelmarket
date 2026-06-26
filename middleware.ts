@@ -15,5 +15,11 @@ export const config = {
     '/about',
     '/services',
     '/contact',
+    '/hotels',
+    '/hoteles',
+    '/partners',
+    '/socios',
+    '/case-studies',
+    '/casos-de-exito',
   ],
 };

@@ -1,19 +1,47 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
+
+import { useState, useCallback } from 'react';
+import { useTranslations } from 'next-intl/server';
 import { Container } from '@/components/ui/container';
 import { NavLink } from './nav-link';
 import { LanguageSwitcher } from './language-switcher';
 import { MobileNav } from './mobile-nav';
+import { AudienceToggle, type Audience } from './audience-toggle';
 import type { Locale } from '@/i18n/routing';
 
-export async function Header({ locale }: { locale: Locale }) {
-  const t = await getTranslations({ locale, namespace: 'nav' });
+type NavItem = {
+  href: string;
+  label: string;
+};
 
-  const links = [
-    { href: '/', label: t('home') },
-    { href: '/about', label: t('about') },
-    { href: '/services', label: t('services') },
-    { href: '/contact', label: t('contact') },
-  ];
+const buyerLinks: { href: string; key: string }[] = [
+  { href: '/', key: 'home' },
+  { href: '/hotels', key: 'hotels' },
+  { href: '/services', key: 'services' },
+  { href: '/about', key: 'about' },
+  { href: '/contact', key: 'contact' },
+];
+
+const partnerLinks: { href: string; key: string }[] = [
+  { href: '/', key: 'home' },
+  { href: '/partners', key: 'partners' },
+  { href: '/case-studies', key: 'caseStudies' },
+  { href: '/about', key: 'about' },
+  { href: '/contact', key: 'contact' },
+];
+
+export function Header({ locale }: { locale: Locale }) {
+  const [audience, setAudience] = useState<Audience>('buyers');
+  const t = useTranslations({ locale, namespace: 'nav' });
+
+  const links: NavItem[] = (audience === 'buyers' ? buyerLinks : partnerLinks).map((l) => ({
+    href: l.href,
+    label: t(l.key),
+  }));
+
+  const handleAudienceChange = useCallback((a: Audience) => {
+    setAudience(a);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-brand-primary shadow-sm">
@@ -32,8 +60,9 @@ export async function Header({ locale }: { locale: Locale }) {
           ))}
         </nav>
 
-        {/* Right side: language switcher + mobile hamburger */}
-        <div className="flex items-center gap-2">
+        {/* Right side: audience toggle + language switcher + mobile hamburger */}
+        <div className="flex items-center gap-3">
+          <AudienceToggle onChange={handleAudienceChange} />
           <LanguageSwitcher />
           <MobileNav links={links} />
         </div>
