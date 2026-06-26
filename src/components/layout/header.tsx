@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { useTranslations } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { NavLink } from './nav-link';
 import { LanguageSwitcher } from './language-switcher';
@@ -32,7 +32,7 @@ const partnerLinks: { href: string; key: string }[] = [
 
 export function Header({ locale }: { locale: Locale }) {
   const [audience, setAudience] = useState<Audience>('buyers');
-  const t = useTranslations({ locale, namespace: 'nav' });
+  const t = useTranslations('nav');
 
   const links: NavItem[] = (audience === 'buyers' ? buyerLinks : partnerLinks).map((l) => ({
     href: l.href,

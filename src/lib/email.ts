@@ -1,7 +1,5 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 type EmailPayload = {
   to: string;
   from: string;
@@ -9,11 +7,20 @@ type EmailPayload = {
   html: string;
 };
 
+function getResendClient(): Resend {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY environment variable is not set');
+  }
+  return new Resend(apiKey);
+}
+
 /**
  * Send an email via Resend.
  * Configured via RESEND_API_KEY and CONTACT_EMAIL_TO env vars.
  */
 export async function sendEmail(payload: EmailPayload): Promise<void> {
+  const resend = getResendClient();
   const { error } = await resend.emails.send({
     from: payload.from,
     to: payload.to,

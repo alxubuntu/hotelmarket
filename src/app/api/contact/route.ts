@@ -10,7 +10,7 @@ const contactSchema = z.object({
     .max(100, 'Name must be between 2 and 100 characters'),
   email: z.string().email('Please enter a valid email address'),
   subject: z.enum(['general', 'demo', 'partners'], {
-    errorMap: () => ({ message: 'Please select a subject' }),
+    message: 'Please select a subject',
   }),
   message: z
     .string()
