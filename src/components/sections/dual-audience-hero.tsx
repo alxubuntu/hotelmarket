@@ -21,8 +21,8 @@ export function DualAudienceHero() {
     ? navT('partnersLabel')
     : navT('buyers');
   const secondaryPrompt = isBuyer
-    ? '¿Eres socio?'
-    : '¿Buscas hotel?';
+    ? '¿Te interesa ser'
+    : '¿Buscas para tu empresa?';
 
   return (
     <section className="relative bg-gradient-to-br from-brand-primary to-[#0f2640] py-16 text-white md:py-28">
