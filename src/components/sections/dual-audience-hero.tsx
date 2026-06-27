@@ -1,9 +1,14 @@
 'use client';
 
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { AudienceToggle } from '@/components/layout/audience-toggle';
 import { useAudience } from '@/contexts/audience-context';
+import { WhatsAppModal } from '@/components/ui/whatsapp-modal';
+
+const WHATSAPP_NUMBER = '51901201502';
+const WHATSAPP_FALLBACK_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, estoy interesado en ser socio de Hotel Market Pro.')}`;
 
 export function DualAudienceHero() {
   const t = useTranslations('home.hero');
@@ -15,7 +20,7 @@ export function DualAudienceHero() {
   const heading = isBuyer ? t('buyerHeading') : t('partnerHeading');
   const subheading = isBuyer ? t('buyerSubheading') : t('partnerSubheading');
   const ctaLabel = isBuyer ? t('buyerCta') : t('partnerCta');
-  const ctaHref = isBuyer ? '#hotels' : '#partners';
+  const ctaHref = isBuyer ? '#hotels' : WHATSAPP_FALLBACK_URL;
 
   const secondaryLabel = isBuyer
     ? navT('partnersLabel')
@@ -24,15 +29,44 @@ export function DualAudienceHero() {
     ? '¿Te interesa ser'
     : '¿Buscas para tu empresa?';
 
+  const [modalOpen, setModalOpen] = useState(false);
+  const ctaRef = useRef<HTMLAnchorElement>(null);
+
+  const openModal = useCallback(() => setModalOpen(true), []);
+
+  // Native listener for instant tap on partner CTA
+  useEffect(() => {
+    const el = ctaRef.current;
+    if (!el) return;
+
+    const handler = (e: Event) => {
+      // Only intercept when in partner mode
+      if (!isBuyer) {
+        e.preventDefault();
+        e.stopPropagation();
+        openModal();
+      }
+      // When isBuyer, let the default anchor scroll happen
+    };
+
+    el.addEventListener('click', handler, { capture: true });
+    el.addEventListener('touchend', handler, { capture: true });
+
+    return () => {
+      el.removeEventListener('click', handler, { capture: true });
+      el.removeEventListener('touchend', handler, { capture: true });
+    };
+  }, [isBuyer, openModal]);
+
   return (
     <section className="relative bg-gradient-to-br from-brand-primary to-[#0f2640] py-16 text-white md:py-28">
       <Container className="text-center">
-        {/* Audience toggle with more breathing room */}
+        {/* Audience toggle */}
         <div className="mb-10 flex justify-center">
           <AudienceToggle />
         </div>
 
-        {/* Heading — changes with audience */}
+        {/* Heading */}
         <h1 className="mx-auto max-w-4xl font-heading text-3xl font-bold tracking-tight md:text-5xl lg:text-6xl">
           {heading}
         </h1>
@@ -42,10 +76,13 @@ export function DualAudienceHero() {
           {subheading}
         </p>
 
-        {/* Primary CTA */}
+        {/* Primary CTA — partners opens modal, buyers scrolls to #hotels */}
         <div className="mt-8">
           <a
+            ref={ctaRef}
             href={ctaHref}
+            target={!isBuyer ? '_blank' : undefined}
+            rel={!isBuyer ? 'noopener noreferrer' : undefined}
             className="inline-flex w-full items-center justify-center rounded-xl bg-brand-secondary px-10 py-4 text-base font-semibold text-black transition-colors hover:bg-brand-secondary-light md:w-auto"
           >
             {ctaLabel}
@@ -101,6 +138,8 @@ export function DualAudienceHero() {
           </svg>
         </a>
       </div>
+
+      <WhatsAppModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }
