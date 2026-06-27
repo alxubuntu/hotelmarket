@@ -52,12 +52,17 @@ export function Header({ locale }: { locale: Locale }) {
             strokeLinejoin="round"
             aria-hidden="true"
           >
-            {/* Building / hotel icon */}
-            <rect x="4" y="10" width="24" height="18" rx="2" />
-            <path d="M4 14h24" />
-            <rect x="10" y="18" width="4" height="4" rx="1" />
-            <rect x="18" y="18" width="4" height="4" rx="1" />
-            <path d="M16 4l-6 6h12l-6-6z" />
+            {/* Modern hotel facade with H sign */}
+            <rect x="4" y="6" width="24" height="22" rx="2" />
+            {/* H sign */}
+            <path d="M12 11v10M20 11v10M12 16h8" strokeWidth="1.8" />
+            {/* Windows row 1 */}
+            <rect x="8" y="6" width="6" height="5" rx="0.5" />
+            <rect x="18" y="6" width="6" height="5" rx="0.5" />
+            {/* Door */}
+            <rect x="12" y="21" width="8" height="7" rx="1" />
+            {/* Floor line */}
+            <path d="M4 14h24" strokeOpacity="0.4" />
           </svg>
           <span className="text-lg font-bold tracking-tight">
             <span className="text-white">Hotel Market </span>
