@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { NavLink } from './nav-link';
+import { LanguageSwitcher } from './language-switcher';
 import { MobileNav } from './mobile-nav';
 import { useAudience } from '@/contexts/audience-context';
 import type { Locale } from '@/i18n/routing';
@@ -79,8 +80,11 @@ export function Header({ locale }: { locale: Locale }) {
           ))}
         </nav>
 
-        {/* Mobile nav (hamburger) */}
-        <MobileNav links={links} />
+        {/* Right section: language switcher + mobile nav */}
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+          <MobileNav links={links} />
+        </div>
       </Container>
     </header>
   );
