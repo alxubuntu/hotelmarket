@@ -290,7 +290,17 @@
     "cta": {
       "heading": "Ready to Grow Your Corporate Revenue?",
       "subtext": "Join 200+ hotels already generating corporate revenue through our platform.",
-      "button": "Request a Demo"
+      "button": "Become a Partner",
+      "modal": {
+        "heading": "Become a Partner",
+        "subtext": "Fill in your details and we'll reach out via WhatsApp.",
+        "name": "Full Name",
+        "namePlaceholder": "John Doe",
+        "email": "Email Address",
+        "emailPlaceholder": "john@company.com",
+        "submit": "Send via WhatsApp",
+        "cancel": "Cancel"
+      }
     }
   },
   "caseStudies": {
@@ -323,19 +333,9 @@
       }
     ],
     "cta": {
-      "heading": "Want Results Like These?",
-      "subtext": "Join our partner network and start growing your corporate revenue today.",
-      "button": "Become a Partner",
-      "modal": {
-        "heading": "Become a Partner",
-        "subtext": "Fill in your details and we'll reach out via WhatsApp.",
-        "name": "Full Name",
-        "namePlaceholder": "John Doe",
-        "email": "Email Address",
-        "emailPlaceholder": "john@company.com",
-        "submit": "Send via WhatsApp",
-        "cancel": "Cancel"
-      }
+      "heading": "Ready to Grow Your Corporate Revenue?",
+      "subtext": "Join 200+ hotels already generating corporate revenue through our platform.",
+      "button": "Become a Partner"
     }
   },
   "contact": {

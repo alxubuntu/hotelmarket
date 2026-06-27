@@ -290,7 +290,17 @@
     "cta": {
       "heading": "¿Listo para Aumentar tus Ingresos Corporativos?",
       "subtext": "Únete a 200+ hoteles que ya generan ingresos corporativos a través de nuestra plataforma.",
-      "button": "Solicitar Demostración"
+      "button": "Ser Socio",
+      "modal": {
+        "heading": "Ser Socio",
+        "subtext": "Completa tus datos y te contactaremos por WhatsApp.",
+        "name": "Nombre Completo",
+        "namePlaceholder": "Juan Pérez",
+        "email": "Correo Electrónico",
+        "emailPlaceholder": "juan@empresa.com",
+        "submit": "Enviar por WhatsApp",
+        "cancel": "Cancelar"
+      }
     }
   },
   "caseStudies": {
@@ -325,17 +335,7 @@
     "cta": {
       "heading": "¿Quieres Resultados Como Estos?",
       "subtext": "Únete a nuestra red de socios y comienza a hacer crecer tus ingresos corporativos hoy.",
-      "button": "Ser Socio",
-      "modal": {
-        "heading": "Ser Socio",
-        "subtext": "Completa tus datos y te contactaremos por WhatsApp.",
-        "name": "Nombre Completo",
-        "namePlaceholder": "Juan Pérez",
-        "email": "Correo Electrónico",
-        "emailPlaceholder": "juan@empresa.com",
-        "submit": "Enviar por WhatsApp",
-        "cancel": "Cancelar"
-      }
+      "button": "Ser Socio"
     }
   },
   "contact": {
