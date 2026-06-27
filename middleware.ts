@@ -5,18 +5,6 @@ export default createMiddleware(routing);
 
 // next-intl v4 matcher — root + all paths except static assets and Next.js internals
 export const config = {
-  matcher: [
-    '/',
-    '/(en|es)',
-    '/(en|es)/:path*',
-    '/about',
-    '/services',
-    '/contact',
-    '/hotels',
-    '/hoteles',
-    '/partners',
-    '/socios',
-    '/case-studies',
-    '/casos-de-exito',
-  ],
+  // Match all routes except static assets and Next.js internals (next-intl v4 recommended matcher)
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
 };
