@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Card } from '@/components/ui/card';
@@ -20,7 +20,7 @@ export function PartnerBenefits() {
   const items = t.raw('benefits.items') as BenefitItem[];
   const [modalOpen, setModalOpen] = useState(false);
 
-  function handleCtaClick(e: React.MouseEvent<HTMLAnchorElement>) {
+  function handleCtaSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setModalOpen(true);
   }
@@ -44,7 +44,8 @@ export function PartnerBenefits() {
           ))}
         </div>
 
-        {/* CTA — progressive enhancement: <a> works without JS, onClick opens modal */}
+        {/* CTA — <form> with action=wa.me works without JS.
+            With JS: onSubmit prevents default and opens modal. */}
         <div className="mt-12 text-center">
           <h3 className="mb-4 font-heading text-2xl font-bold text-brand-primary">
             {t('cta.heading')}
@@ -52,15 +53,14 @@ export function PartnerBenefits() {
           <p className="mx-auto mb-6 max-w-xl text-neutral-600">
             {t('cta.subtext')}
           </p>
-          <a
-            href={WHATSAPP_FALLBACK_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={handleCtaClick}
-            className="inline-flex items-center justify-center rounded bg-brand-primary px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-[var(--color-brand-primary-light)] active:bg-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2"
-          >
-            {t('cta.button')}
-          </a>
+          <form action={WHATSAPP_FALLBACK_URL} method="get" target="_blank" onSubmit={handleCtaSubmit}>
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center rounded bg-brand-primary px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-[var(--color-brand-primary-light)] active:bg-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2"
+            >
+              {t('cta.button')}
+            </button>
+          </form>
         </div>
       </Container>
 
