@@ -1,10 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { WhatsAppModal } from '@/components/ui/whatsapp-modal';
 
 type BenefitItem = {
   title: string;
@@ -14,6 +16,7 @@ type BenefitItem = {
 export function PartnerBenefits() {
   const t = useTranslations('partners');
   const items = t.raw('benefits.items') as BenefitItem[];
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <section className="bg-white py-16 md:py-24">
@@ -42,11 +45,13 @@ export function PartnerBenefits() {
           <p className="mx-auto mb-6 max-w-xl text-neutral-600">
             {t('cta.subtext')}
           </p>
-          <Button size="lg">
+          <Button size="lg" onClick={() => setModalOpen(true)}>
             {t('cta.button')}
           </Button>
         </div>
       </Container>
+
+      <WhatsAppModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }

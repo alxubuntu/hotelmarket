@@ -325,7 +325,17 @@
     "cta": {
       "heading": "¿Quieres Resultados Como Estos?",
       "subtext": "Únete a nuestra red de socios y comienza a hacer crecer tus ingresos corporativos hoy.",
-      "button": "Ser Socio"
+      "button": "Ser Socio",
+      "modal": {
+        "heading": "Ser Socio",
+        "subtext": "Completa tus datos y te contactaremos por WhatsApp.",
+        "name": "Nombre Completo",
+        "namePlaceholder": "Juan Pérez",
+        "email": "Correo Electrónico",
+        "emailPlaceholder": "juan@empresa.com",
+        "submit": "Enviar por WhatsApp",
+        "cancel": "Cancelar"
+      }
     }
   },
   "contact": {
