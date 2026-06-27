@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { LangSetter } from '@/components/layout/lang-setter';
+import { AudienceProvider } from '@/contexts/audience-context';
 
 type Props = {
   children: ReactNode;
@@ -44,11 +45,13 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <LangSetter />
-      <div className="flex min-h-screen flex-col">
-        <Header locale={localeTyped} />
-        <main className="flex-1">{children}</main>
-        <Footer locale={localeTyped} />
-      </div>
+      <AudienceProvider>
+        <div className="flex min-h-screen flex-col">
+          <Header locale={localeTyped} />
+          <main className="flex-1">{children}</main>
+          <Footer locale={localeTyped} />
+        </div>
+      </AudienceProvider>
     </NextIntlClientProvider>
   );
 }

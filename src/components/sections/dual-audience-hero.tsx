@@ -2,51 +2,67 @@
 
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
-import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { AudienceToggle } from '@/components/layout/audience-toggle';
+import { useAudience } from '@/contexts/audience-context';
 
 export function DualAudienceHero() {
   const t = useTranslations('home.hero');
+  const navT = useTranslations('nav');
+  const { audience, setAudience } = useAudience();
+
+  const isBuyer = audience === 'buyers';
+
+  const heading = isBuyer ? t('buyerHeading') : t('partnerHeading');
+  const subheading = isBuyer ? t('buyerSubheading') : t('partnerSubheading');
+  const ctaLabel = isBuyer ? t('buyerCta') : t('partnerCta');
+  const ctaHref = isBuyer ? '#hotels' : '#partners';
+
+  const secondaryLabel = isBuyer
+    ? navT('partnersLabel')
+    : navT('buyers');
+  const secondaryPrompt = isBuyer
+    ? '¿Eres socio?'
+    : '¿Buscas hotel?';
 
   return (
-    <section className="relative bg-gradient-to-br from-brand-primary to-[#0f2640] py-20 text-white md:py-36">
+    <section className="relative bg-gradient-to-br from-brand-primary to-[#0f2640] py-16 text-white md:py-28">
       <Container className="text-center">
-        {/* Heading */}
-        <h1 className="mx-auto max-w-4xl font-heading text-4xl font-bold tracking-tight md:text-5xl lg:text-7xl">
-          {t('buyerHeading')}
+        {/* Audience toggle with more breathing room */}
+        <div className="mb-10 flex justify-center">
+          <AudienceToggle />
+        </div>
+
+        {/* Heading — changes with audience */}
+        <h1 className="mx-auto max-w-4xl font-heading text-3xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+          {heading}
         </h1>
 
         {/* Subheading */}
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl">
-          {t('buyerSubheading')}
+        <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
+          {subheading}
         </p>
 
-        {/* Partner heading (shown below buyer for context) */}
-        <div className="mt-16 grid gap-8 md:grid-cols-2">
-          <ScrollReveal>
-            <div className="rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-              <h2 className="font-heading text-2xl font-bold">{t('buyerHeading')}</h2>
-              <p className="mt-3 text-white/70">{t('buyerSubheading')}</p>
-              <a
-                href="#hotels"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-brand-secondary px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-brand-secondary-light md:w-auto"
-              >
-                {t('buyerCta')}
-              </a>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal>
-            <div className="rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-              <h2 className="font-heading text-2xl font-bold">{t('partnerHeading')}</h2>
-              <p className="mt-3 text-white/70">{t('partnerSubheading')}</p>
-              <a
-                href="#partners"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-xl border-2 border-brand-secondary px-6 py-3 text-sm font-medium text-brand-secondary transition-colors hover:bg-brand-secondary hover:text-black md:w-auto"
-              >
-                {t('partnerCta')}
-              </a>
-            </div>
-          </ScrollReveal>
+        {/* Primary CTA */}
+        <div className="mt-8">
+          <a
+            href={ctaHref}
+            className="inline-flex w-full items-center justify-center rounded-xl bg-brand-secondary px-10 py-4 text-base font-semibold text-black transition-colors hover:bg-brand-secondary-light md:w-auto"
+          >
+            {ctaLabel}
+          </a>
         </div>
+
+        {/* Secondary audience prompt */}
+        <button
+          onClick={() => setAudience(isBuyer ? 'partners' : 'buyers')}
+          className="mt-4 inline-flex items-center gap-1 text-sm text-white/50 transition-colors hover:text-white/80"
+        >
+          <span>{secondaryPrompt}</span>
+          <span className="font-medium underline underline-offset-2">
+            {secondaryLabel}
+          </span>
+          <span aria-hidden="true">→</span>
+        </button>
 
         {/* Stat badges */}
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4 text-sm md:gap-8 md:text-base">

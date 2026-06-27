@@ -1,23 +1,17 @@
 'use client';
 
-import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useAudience } from '@/contexts/audience-context';
 
 export type Audience = 'buyers' | 'partners';
 
 type AudienceToggleProps = {
-  onChange?: (audience: Audience) => void;
   className?: string;
 };
 
-export function AudienceToggle({ onChange, className = '' }: AudienceToggleProps) {
+export function AudienceToggle({ className = '' }: AudienceToggleProps) {
   const t = useTranslations('nav');
-  const [active, setActive] = useState<Audience>('buyers');
-
-  function handleSelect(audience: Audience) {
-    setActive(audience);
-    onChange?.(audience);
-  }
+  const { audience, setAudience } = useAudience();
 
   const base =
     'px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-200';
@@ -33,17 +27,17 @@ export function AudienceToggle({ onChange, className = '' }: AudienceToggleProps
     >
       <button
         role="radio"
-        aria-checked={active === 'buyers'}
-        onClick={() => handleSelect('buyers')}
-        className={`${base} ${active === 'buyers' ? activeStyle : inactiveStyle}`}
+        aria-checked={audience === 'buyers'}
+        onClick={() => setAudience('buyers')}
+        className={`${base} ${audience === 'buyers' ? activeStyle : inactiveStyle}`}
       >
         {t('buyers')}
       </button>
       <button
         role="radio"
-        aria-checked={active === 'partners'}
-        onClick={() => handleSelect('partners')}
-        className={`${base} ${active === 'partners' ? activeStyle : inactiveStyle}`}
+        aria-checked={audience === 'partners'}
+        onClick={() => setAudience('partners')}
+        className={`${base} ${audience === 'partners' ? activeStyle : inactiveStyle}`}
       >
         {t('partnersLabel')}
       </button>

@@ -1,12 +1,10 @@
 'use client';
 
-import { useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { NavLink } from './nav-link';
-import { LanguageSwitcher } from './language-switcher';
 import { MobileNav } from './mobile-nav';
-import { AudienceToggle, type Audience } from './audience-toggle';
+import { useAudience } from '@/contexts/audience-context';
 import type { Locale } from '@/i18n/routing';
 
 type NavItem = {
@@ -31,7 +29,7 @@ const partnerLinks: { href: string; key: string }[] = [
 ];
 
 export function Header({ locale }: { locale: Locale }) {
-  const [audience, setAudience] = useState<Audience>('buyers');
+  const { audience } = useAudience();
   const t = useTranslations('nav');
 
   const links: NavItem[] = (audience === 'buyers' ? buyerLinks : partnerLinks).map((l) => ({
@@ -39,16 +37,16 @@ export function Header({ locale }: { locale: Locale }) {
     label: t(l.key),
   }));
 
-  const handleAudienceChange = useCallback((a: Audience) => {
-    setAudience(a);
-  }, []);
-
   return (
     <header className="sticky top-0 z-50 bg-brand-primary shadow-sm">
-      <Container as="div" className="flex items-center justify-between py-4">
+      <Container as="div" className="flex items-center justify-between py-3">
         {/* Logo */}
-        <NavLink href="/" className="text-lg font-bold tracking-tight text-white">
-          Hotel Market Pro
+        <NavLink href="/" className="flex items-center gap-2">
+          <img
+            src="/logo.png"
+            alt="Hotel Market Pro"
+            className="h-8 w-auto"
+          />
         </NavLink>
 
         {/* Desktop navigation */}
@@ -60,12 +58,8 @@ export function Header({ locale }: { locale: Locale }) {
           ))}
         </nav>
 
-        {/* Right side: audience toggle + language switcher + mobile hamburger */}
-        <div className="flex items-center gap-3">
-          <AudienceToggle onChange={handleAudienceChange} />
-          <LanguageSwitcher />
-          <MobileNav links={links} />
-        </div>
+        {/* Mobile nav (hamburger) */}
+        <MobileNav links={links} />
       </Container>
     </header>
   );
