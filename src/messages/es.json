@@ -352,19 +352,15 @@
       "messageRequired": "El mensaje es obligatorio",
       "messageLength": "El mensaje debe tener entre 10 y 5000 caracteres"
     },
-    "submit": "Enviar Mensaje",
-    "sending": "Enviando…",
+    "submit": "Enviar por WhatsApp",
+    "sending": "Abriendo WhatsApp…",
     "success": {
-      "title": "¡Mensaje enviado con éxito!",
-      "body": "Gracias por contactarnos. Te responderemos dentro de 24 horas."
+      "title": "¡WhatsApp abierto!",
+      "body": "Tu mensaje está listo en WhatsApp. Toca Enviar para completar tu consulta."
     },
     "error": {
       "title": "Algo salió mal",
       "body": "Por favor intenta de nuevo o contáctanos directamente en hello@hotelmarketpro.com"
-    },
-    "rateLimited": {
-      "title": "Demasiadas solicitudes",
-      "body": "Has enviado demasiados mensajes. Por favor espera un momento antes de intentar de nuevo."
     }
   },
   "metadata": {

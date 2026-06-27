@@ -5,24 +5,56 @@ import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
 
+const WHATSAPP_NUMBER = '51901201502';
+
 type FormStatus =
   | { type: 'idle' }
-  | { type: 'sending' }
+  | { type: 'validating' }
+  | { type: 'redirecting' }
   | { type: 'success' }
-  | { type: 'error'; message: string }
-  | { type: 'rate_limited'; retryAfter: number };
+  | { type: 'error'; message: string };
+
+function buildWhatsAppUrl(payload: {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}): string {
+  const subjectLabels: Record<string, string> = {
+    general: 'General Inquiry',
+    demo: 'Request a Demo',
+    partners: 'Partnership Inquiry',
+  };
+  const subjectLabel = subjectLabels[payload.subject] ?? payload.subject;
+
+  const text = [
+    `Hola, soy ${payload.name} (${payload.email}).`,
+    '',
+    `Asunto: ${subjectLabel}`,
+    '',
+    payload.message,
+  ].join('\n');
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
 
 export function ContactForm() {
   const t = useTranslations('contact');
   const [status, setStatus] = useState<FormStatus>({ type: 'idle' });
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus({ type: 'sending' });
+    setStatus({ type: 'validating' });
 
     const form = e.currentTarget;
-    const formData = new FormData(form);
 
+    if (!form.checkValidity()) {
+      setStatus({ type: 'idle' });
+      form.reportValidity();
+      return;
+    }
+
+    const formData = new FormData(form);
     const payload = {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
@@ -30,31 +62,13 @@ export function ContactForm() {
       message: formData.get('message') as string,
     };
 
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
+    setStatus({ type: 'redirecting' });
 
-      const data = await res.json();
+    const url = buildWhatsAppUrl(payload);
+    window.open(url, '_blank', 'noopener,noreferrer');
 
-      if (res.status === 429) {
-        setStatus({ type: 'rate_limited', retryAfter: data.retryAfter ?? 60 });
-        return;
-      }
-
-      if (!res.ok || data.status === 'error') {
-        const errorMsg = data.errors?.[0]?.message ?? 'Something went wrong. Please try again.';
-        setStatus({ type: 'error', message: errorMsg });
-        return;
-      }
-
-      setStatus({ type: 'success' });
-      form.reset();
-    } catch {
-      setStatus({ type: 'error', message: 'Network error. Please check your connection and try again.' });
-    }
+    setStatus({ type: 'success' });
+    form.reset();
   }
 
   const inputClasses =
@@ -95,7 +109,7 @@ export function ContactForm() {
                 required
                 minLength={2}
                 maxLength={100}
-                disabled={status.type === 'sending'}
+                disabled={status.type === 'redirecting'}
                 className={inputClasses}
                 placeholder={t('fields.namePlaceholder')}
               />
@@ -109,7 +123,7 @@ export function ContactForm() {
                 name="email"
                 type="email"
                 required
-                disabled={status.type === 'sending'}
+                disabled={status.type === 'redirecting'}
                 className={inputClasses}
                 placeholder={t('fields.emailPlaceholder')}
               />
@@ -122,7 +136,7 @@ export function ContactForm() {
                 id="subject"
                 name="subject"
                 required
-                disabled={status.type === 'sending'}
+                disabled={status.type === 'redirecting'}
                 className={inputClasses}
               >
                 <option value="">{t('fields.subject')}</option>
@@ -142,7 +156,7 @@ export function ContactForm() {
                 minLength={10}
                 maxLength={5000}
                 rows={5}
-                disabled={status.type === 'sending'}
+                disabled={status.type === 'redirecting'}
                 className={inputClasses}
                 placeholder={t('fields.messagePlaceholder')}
               />
@@ -154,14 +168,8 @@ export function ContactForm() {
               </div>
             )}
 
-            {status.type === 'rate_limited' && (
-              <div className="rounded-lg border border-orange-200 bg-orange-50 px-4 py-3 text-sm text-orange-700" role="alert">
-                {t('rateLimited.body')}
-              </div>
-            )}
-
-            <Button type="submit" size="lg" className="w-full" disabled={status.type === 'sending'}>
-              {status.type === 'sending' ? t('sending') : t('submit')}
+            <Button type="submit" size="lg" className="w-full" disabled={status.type === 'redirecting'}>
+              {status.type === 'redirecting' ? t('sending') : t('submit')}
             </Button>
           </form>
         )}
