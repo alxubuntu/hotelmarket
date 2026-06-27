@@ -4,9 +4,11 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { WhatsAppModal } from '@/components/ui/whatsapp-modal';
+
+const WHATSAPP_NUMBER = '51901201502';
+const WHATSAPP_FALLBACK_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, estoy interesado en ser socio de Hotel Market Pro.')}`;
 
 type BenefitItem = {
   title: string;
@@ -17,6 +19,11 @@ export function PartnerBenefits() {
   const t = useTranslations('partners');
   const items = t.raw('benefits.items') as BenefitItem[];
   const [modalOpen, setModalOpen] = useState(false);
+
+  function handleCtaClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    e.preventDefault();
+    setModalOpen(true);
+  }
 
   return (
     <section className="bg-white py-16 md:py-24">
@@ -37,7 +44,7 @@ export function PartnerBenefits() {
           ))}
         </div>
 
-        {/* CTA */}
+        {/* CTA — progressive enhancement: <a> works without JS, onClick opens modal */}
         <div className="mt-12 text-center">
           <h3 className="mb-4 font-heading text-2xl font-bold text-brand-primary">
             {t('cta.heading')}
@@ -45,9 +52,15 @@ export function PartnerBenefits() {
           <p className="mx-auto mb-6 max-w-xl text-neutral-600">
             {t('cta.subtext')}
           </p>
-          <Button size="lg" onClick={() => setModalOpen(true)}>
+          <a
+            href={WHATSAPP_FALLBACK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleCtaClick}
+            className="inline-flex items-center justify-center rounded bg-brand-primary px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-[var(--color-brand-primary-light)] active:bg-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2"
+          >
             {t('cta.button')}
-          </Button>
+          </a>
         </div>
       </Container>
 
