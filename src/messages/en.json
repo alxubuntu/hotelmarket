@@ -27,7 +27,7 @@
       "partnerCta": "Partner With Us",
       "statHotels": "200+ Hotels",
       "statCountries": "15 Countries",
-      "statRetention": "100% Satisfaction"
+      "statRetention": "98% Satisfaction"
     },
     "features": {
       "heading": "The Hotel Market Pro Platform",
@@ -65,7 +65,7 @@
       "metrics": [
         { "value": "200+", "label": "Hotels" },
         { "value": "15", "label": "Countries" },
-        { "value": "100%", "label": "Satisfaction" },
+        { "value": "98%", "label": "Satisfaction" },
         { "value": "24/7", "label": "Support" }
       ]
     },

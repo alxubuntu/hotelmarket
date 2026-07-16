@@ -27,7 +27,7 @@
       "partnerCta": "Ser Socio",
       "statHotels": "200+ Hoteles",
       "statCountries": "15 Países",
-      "statRetention": "100% Satisfacción"
+      "statRetention": "98% Satisfacción"
     },
     "features": {
       "heading": "La Plataforma Hotel Market Pro",
@@ -65,7 +65,7 @@
       "metrics": [
         { "value": "200+", "label": "Hoteles" },
         { "value": "15", "label": "Países" },
-        { "value": "100%", "label": "Satisfacción" },
+        { "value": "98%", "label": "Satisfacción" },
         { "value": "24/7", "label": "Soporte" }
       ]
     },
