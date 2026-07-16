@@ -8,6 +8,25 @@ type Metric = {
   label: string;
 };
 
+type ClientLogo = {
+  file: string;
+  name: string;
+};
+
+const clientLogos: ClientLogo[] = [
+  { file: 'brac.png', name: 'BRAC' },
+  { file: 'childfund.png', name: 'ChildFund' },
+  { file: 'habitat_for_humanity.png', name: 'Habitat for Humanity' },
+  { file: 'irc.png', name: 'IRC' },
+  { file: 'mercy_corps.png', name: 'Mercy Corps' },
+  { file: 'partners_in_health.png', name: 'Partners In Health' },
+  { file: 'path.png', name: 'PATH' },
+  { file: 'plan_international.png', name: 'Plan International' },
+  { file: 'plan_international_canada.png', name: 'Plan International Canada' },
+  { file: 'world_vision.png', name: 'World Vision' },
+  { file: 'world_vision_canada.png', name: 'World Vision Canada' },
+];
+
 const icons = [
   // Buildings — hotel count
   <svg
@@ -81,6 +100,30 @@ const icons = [
   </svg>,
 ];
 
+function LogoMarquee() {
+  return (
+    <div className="mt-16">
+      <p className="mb-8 text-center text-sm font-semibold uppercase tracking-widest text-neutral-400">
+        Clientes Corporativos
+      </p>
+      <div className="marquee-wrapper overflow-hidden" role="img" aria-label="Client logos">
+        <div className="marquee-track">
+          {[...clientLogos, ...clientLogos].map((logo, i) => (
+            <div key={`${logo.file}-${i}`} className="marquee-item">
+              <img
+                src={`/images/clients/${logo.file}`}
+                alt={`${logo.name} logo`}
+                title={logo.name}
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export async function TrustBar({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: 'home.trust' });
   const metrics = t.raw('metrics') as Metric[];
@@ -111,6 +154,9 @@ export async function TrustBar({ locale }: { locale: Locale }) {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* Corporate clients logo marquee */}
+        <LogoMarquee />
       </Container>
     </section>
   );

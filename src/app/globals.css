@@ -31,3 +31,43 @@
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-heading: 'Playfair Display', serif;
 }
+
+/* Marquee animation for client logos */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  gap: 3rem;
+  width: fit-content;
+  animation: marquee 40s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: auto;
+}
+
+.marquee-item img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1.05);
+  opacity: 0.7;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.marquee-wrapper:hover .marquee-item img {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+}
