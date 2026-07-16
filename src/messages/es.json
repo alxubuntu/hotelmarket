@@ -61,6 +61,7 @@
     },
     "trust": {
       "heading": "Empresas Líderes Confían en Nosotros",
+      "clientsHeading": "Clientes Corporativos",
       "metrics": [
         { "value": "200+", "label": "Hoteles" },
         { "value": "15", "label": "Países" },

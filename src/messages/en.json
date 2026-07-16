@@ -61,6 +61,7 @@
     },
     "trust": {
       "heading": "Trusted by Leading Companies Worldwide",
+      "clientsHeading": "Corporate Clients",
       "metrics": [
         { "value": "200+", "label": "Hotels" },
         { "value": "15", "label": "Countries" },

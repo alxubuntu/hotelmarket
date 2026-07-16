@@ -100,13 +100,13 @@ const icons = [
   </svg>,
 ];
 
-function LogoMarquee() {
+function LogoMarquee({ heading }: { heading: string }) {
   return (
     <div className="mt-16">
       <p className="mb-8 text-center text-sm font-semibold uppercase tracking-widest text-neutral-400">
-        Clientes Corporativos
+        {heading}
       </p>
-      <div className="marquee-wrapper overflow-hidden" role="img" aria-label="Client logos">
+      <div className="marquee-wrapper overflow-hidden" role="img" aria-label={heading}>
         <div className="marquee-track">
           {[...clientLogos, ...clientLogos].map((logo, i) => (
             <div key={`${logo.file}-${i}`} className="marquee-item">
@@ -115,6 +115,8 @@ function LogoMarquee() {
                 alt={`${logo.name} logo`}
                 title={logo.name}
                 loading="lazy"
+                width={250}
+                height={90}
               />
             </div>
           ))}
@@ -156,7 +158,7 @@ export async function TrustBar({ locale }: { locale: Locale }) {
         </div>
 
         {/* Corporate clients logo marquee */}
-        <LogoMarquee />
+        <LogoMarquee heading={t('clientsHeading')} />
       </Container>
     </section>
   );
